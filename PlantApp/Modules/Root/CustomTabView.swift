@@ -53,5 +53,3 @@ struct CustomTabView: View {
 #Preview {
     CustomTabView(index: .constant(0))
 }
-
-

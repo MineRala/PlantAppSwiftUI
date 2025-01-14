@@ -33,6 +33,7 @@ final class HomeViewModel {
     func loadDataConcurrent() async {
         isLoading = true
         defer { isLoading = false }
+
         do {
             async let questionModels: QuestionModels = NetworkManager.shared.fetchData(endpoint: .getQuestions)
             async let categoryModel: CategoryModel = NetworkManager.shared.fetchData(endpoint: .getCategories)

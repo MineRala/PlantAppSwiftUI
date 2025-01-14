@@ -11,7 +11,7 @@ struct CategoryModel: Decodable {
     let data: [CategoryDataModel?]
 }
 
-struct CategoryDataModel: Decodable, Identifiable{
+struct CategoryDataModel: Decodable, Identifiable {
     let id: Int?
     let name: String?
     let image: CategoryImageModel?

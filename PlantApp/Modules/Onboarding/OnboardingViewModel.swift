@@ -5,7 +5,6 @@
 //  Created by Mine Rala on 22.12.2024.
 //
 
-import Foundation
 import SwiftUI
 
 struct OnboardingPage {

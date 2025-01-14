@@ -5,7 +5,7 @@
 //  Created by Mine Rala on 21.12.2024.
 //
 
-import Foundation
+import SwiftUI
 
 final class GetStartedViewModel: ObservableObject {
     @Published var showFullScreenView = false

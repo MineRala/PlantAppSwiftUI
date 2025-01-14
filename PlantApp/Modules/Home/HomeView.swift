@@ -30,7 +30,6 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 24)
 
-                    // `questions` verisi yüklendikten sonra görünür
                     if let questions = viewModel.questionResult {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 10) {
@@ -42,7 +41,6 @@ struct HomeView: View {
                         }
                     }
 
-                    // `categories` verisi yüklendikten sonra görünür
                     if let categories = viewModel.categoryResult?.data {
                         ScrollView(.vertical, showsIndicators: false) {
                             LazyVGrid(columns: gridItems, spacing: 16) {

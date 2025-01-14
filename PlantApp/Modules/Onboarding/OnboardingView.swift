@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct OnboardingView: View {
     @StateObject private var viewModel = OnboardingViewModel()
 
