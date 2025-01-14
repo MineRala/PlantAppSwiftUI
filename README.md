@@ -26,10 +26,11 @@
 - Tabbar
 
 # UIs
-<p>
-    <img src="https://github.com/user-attachments/assets/013933bb-3384-4fff-b1c3-ec34ac4a27d1" alt="getStarted" width="140" style="margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/88d0c669-ec5c-439c-a2e7-9ccaa3d75c41" alt="onboarding1" width="140" style="margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/03a7ae35-3440-418c-98e0-6c83b738c1b7" alt="onboarding2" width="140" style="margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/2c71d082-5d14-4d5f-b63a-a235cf979de9" alt="paywall" width="140" style="margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/22086303-1711-46d3-987c-0f57a32a7138" alt="home" width="140">
-</p>
+
+<img src="https://github.com/user-attachments/assets/013933bb-3384-4fff-b1c3-ec34ac4a27d1" alt="getStarted" width="150">
+<img src="https://github.com/user-attachments/assets/88d0c669-ec5c-439c-a2e7-9ccaa3d75c41" alt="onboarding1" width="150">
+<img src="https://github.com/user-attachments/assets/03a7ae35-3440-418c-98e0-6c83b738c1b7" alt="onboarding2" width="150">
+<img src="https://github.com/user-attachments/assets/2c71d082-5d14-4d5f-b63a-a235cf979de9" alt="paywall" width="150">
+<img src="https://github.com/user-attachments/assets/22086303-1711-46d3-987c-0f57a32a7138" alt="home" width="150">
+
+
