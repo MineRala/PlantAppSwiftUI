@@ -29,15 +29,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=140, initial-scale=1.0">
     <title>Photo Spacing</title>
     <style>
         .photo-container {
             display: flex;
-            gap: 20px; /* Fotoğraflar arasında 20px boşluk */
+            gap: 20px;
         }
         img {
-            width: 140px; /* Fotoğrafların genişliği */
+            width: 140px;
             height: auto;
         }
     </style>
