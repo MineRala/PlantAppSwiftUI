@@ -10,13 +10,13 @@ import SwiftUI
 
 final class PaywallViewModel: ObservableObject {
     @Published var features: [FeatureModel] = [
-        FeatureModel(title: "Unlimited", subtitle: "Plant Identify", image: Constants.Images.scanner),
-        FeatureModel(title: "Faster", subtitle: "Process", image: Constants.Images.faster),
-        FeatureModel(title: "Unlimited", subtitle: "Plant Identify", image: Constants.Images.scanner),
-        FeatureModel(title: "Faster", subtitle: "Process", image: Constants.Images.faster)
+        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster),
+        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
     ]
     @Published var isSelectOneYear: Bool = true
-    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
+    @AppStorage(AppString.hasSeenOnboarding) private var hasSeenOnboarding: Bool = false
 
     var isSmallScreen: Bool {
         UIScreen.main.bounds.height < 800

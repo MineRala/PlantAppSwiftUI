@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class APIService {
-    static let shared = APIService()
+final class NetworkManager {
+    static let shared = NetworkManager()
 
     func fetchData<T: Decodable>(endpoint: Endpoint) async throws -> T {
         guard let url = URL(string: endpoint.url) else {

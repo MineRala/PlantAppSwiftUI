@@ -51,5 +51,5 @@ struct FeatureCardView: View {
 }
 
 #Preview {
-    FeatureCardView(feature: FeatureModel(title: "Unlimited", subtitle: "Plant Identify", image: Constants.Images.scanner))
+    FeatureCardView(feature: FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner))
 }

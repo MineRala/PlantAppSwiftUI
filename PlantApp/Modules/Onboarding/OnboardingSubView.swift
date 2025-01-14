@@ -83,7 +83,7 @@ struct OnboardingSubView: View {
                 }
                 .padding(.top, !viewModel.isFirstPage ? 12 : 40)
 
-                Button("Continue") {
+                Button(AppString.continueText) {
                     continueButtonTapped()
                 }
                 .frame(maxWidth: .infinity)
@@ -104,17 +104,14 @@ struct OnboardingSubView: View {
             }
         }
     }
-
-
-
 }
 
 #Preview {
     OnboardingSubView(
         page: OnboardingPage(
-            firstVTitle: "Take a photo to",
-            secondVTitle: "the plant!",
-            boldTitle: "identify",
+            firstVTitle: AppString.takePhoto,
+            secondVTitle: AppString.thePlant,
+            boldTitle: AppString.identify,
             image: Constants.Images.onBoardScreen1,
             cornerImage: nil
         ),

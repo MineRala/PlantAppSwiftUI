@@ -24,7 +24,7 @@ struct GetStartedHeaderView: View {
 
 #Preview {
     var message1: AttributedString {
-            var result = AttributedString("Welcome to ")
+        var result = AttributedString(AppString.welcomeTo)
             result.font = .customFont(.rubikRegular, size: 28)
             result.foregroundColor = Constants.Colors.deepGreen
 
@@ -32,10 +32,10 @@ struct GetStartedHeaderView: View {
         }
 
         var message2: AttributedString {
-            var result = AttributedString("PlantApp!")
+            var result = AttributedString(AppString.plantApp)
             result.font = .customFont(.rubikBold, size: 28)
             result.foregroundColor = Constants.Colors.deepGreen
             return result
         }
-    GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: "Identify more than 3000+ plants and 88% accuracy.")
+    GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: AppString.identifyMore)
 }

@@ -28,20 +28,20 @@ struct CategoryCardView: View {
                                 self.isImageLoaded = true
                             }
                     case .failure:
-                        Text("The image was not loaded.")
+                        Text(AppString.imageNotLoad)
                     @unknown default:
                         EmptyView()
                     }
                 }
             } else {
-                Text("Invalid image URL.")
+                Text(AppString.imageInvalid)
             }
 
             if isImageLoaded {
                 HStack {
                     VStack {
                         Spacer()
-                        Text(model.name?.capitalized ?? "")
+                        Text(model.name?.capitalized ?? AppString.emptyString)
                             .font(.customFont(.rubikMedium, size: 16))
                             .foregroundStyle(Constants.Colors.deepGreen)
                             .frame(maxHeight: .infinity, alignment: .topLeading)

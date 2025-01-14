@@ -23,27 +23,27 @@ enum AppError: Error {
     var errorMessage: String {
         switch self {
         case .invalidURL:
-            return "Invalid URL"
+            return AppString.invalidURL
         case .invalidResponse:
-            return "Invalid Response"
+            return AppString.invalidResponse
         case .invalidRequest:
-            return "Invalid Request"
+            return AppString.invalidRequest
         case .invalidData:
-            return "The data received from the server was invalid. Please try again."
+            return AppString.invalidData
         case .invalidHTTPStatusCode(let statusCode):
-            return "Invalid HTTP Status Code: \(statusCode)"
+            return AppString.invalidHTTPStatusCode + "\(statusCode)"
         case .networkError(let error):
-            return "A network error has occurred. Check your Internet connection and try again."
+            return AppString.networkError
         case .decodingError:
-            return "Decoding Error"
+            return AppString.decodingError
         case .unauthorized:
-            return "In order to perform this operation, you must be logged in or have the necessary authorization. Please log in or provide the necessary authorization."
+            return AppString.unauthorized
         case .paymentRequired:
-            return "Sorry, you need to pay to view or access this content."
+            return AppString.paymentRequired
         case .pageNotFound:
-            return "Sorry, the page or resource you requested could not be found. Please check the URL or try again later."
+            return AppString.pageNotFound
         case .noInternetConnection:
-            return "Sorry, there is no internet connection. Please check your internet connection and try again."
+            return AppString.noInternetConnection
         }
     }
 }

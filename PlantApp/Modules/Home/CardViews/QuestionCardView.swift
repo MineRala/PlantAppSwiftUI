@@ -29,17 +29,17 @@ struct QuestionCardView: View {
                                 self.isImageLoaded = true
                             }
                     case .failure:
-                        Text("The image was not loaded.")
+                        Text(AppString.imageNotLoad)
                     @unknown default:
                         EmptyView()
                     }
                 }
             } else {
-                Text("Invalid image URL.")
+                Text(AppString.imageInvalid)
             }
 
             if isImageLoaded {
-                Text(model.title ?? "")
+                Text(model.title ?? AppString.emptyString)
                     .font(.customFont(.rubikRegular, size: 15))
                     .foregroundStyle(Constants.Colors.white)
                     .multilineTextAlignment(.leading)

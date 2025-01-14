@@ -11,13 +11,13 @@ struct GetStartedView: View {
     @StateObject private var viewModel = GetStartedViewModel()
 
     var message1: AttributedString {
-        var result = AttributedString("Welcome to ")
+        var result = AttributedString(AppString.welcomeTo)
         result.font = .customFont(.rubikRegular, size: 28)
         return result
     }
 
     var message2: AttributedString {
-        var result = AttributedString("PlantApp")
+        var result = AttributedString(AppString.plantApp)
         result.font = .customFont(.rubikBold, size: 28)
         return result
     }
@@ -29,7 +29,7 @@ struct GetStartedView: View {
                 .ignoresSafeArea(.all)
 
             VStack(alignment: .leading) {
-                GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: "Identify more than 3000+ plants and 88% accuracy.")
+                GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: AppString.identifyMore)
                     .padding(.leading, 24)
                     .padding(.trailing, 32)
 
@@ -43,7 +43,7 @@ struct GetStartedView: View {
                 }
 
                 VStack(alignment: .center) {
-                    Button("Get Started") {
+                    Button(AppString.getStarted) {
                         viewModel.toggleFullScreenView()
                     }
                     .frame(maxWidth: .infinity)
@@ -55,11 +55,11 @@ struct GetStartedView: View {
                     .padding(.horizontal, 24)
 
                     VStack(alignment: .center) {
-                        Text("By tapping next, you are agreeing to PlantID")
+                        Text(AppString.byTapping)
                         HStack(spacing: 0) {
-                            Text("Terms of Use").underline(true, color: Constants.Colors.mutedOlive)
-                            Text(" & ")
-                            Text("Privacy Policy.").underline(true, color: Constants.Colors.mutedOlive)
+                            Text(AppString.terms).underline(true, color: Constants.Colors.mutedOlive)
+                            Text(AppString.ampersand)
+                            Text(AppString.privacy).underline(true, color: Constants.Colors.mutedOlive)
                         }
                     }
                     .padding(.top, 17)

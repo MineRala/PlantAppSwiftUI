@@ -18,17 +18,17 @@ struct HomeHeaderView: View {
             VStack(alignment: .leading) {
                 Spacer()
                     .frame(height: 50)
-                Text("Hi, plant lover!")
+                Text(AppString.hiPlant)
                     .font(.customFont(.rubikRegular, size: 16))
                     .foregroundStyle(Constants.Colors.deepGreen)
-                Text("Good Afternoon! ⛅")
+                Text(AppString.goodAfternoon)
                     .font(.customFont(.rubikMedium, size: 24))
                     .foregroundStyle(Constants.Colors.deepGreen)
                 HStack {
-                    Image("search")
+                    Image(Constants.Images.search)
                         .renderingMode(.original)
                         .font(.customFont(.rubikRegular, size: 16))
-                    TextField("Search for plants ", text: $searchText)
+                    TextField(AppString.search, text: $searchText)
                         .disabled(true)
                 }
                 .padding()

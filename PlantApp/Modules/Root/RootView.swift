@@ -29,19 +29,19 @@ struct RootView: View {
             HomeView()
         case 1:
             Constants.Colors.white
-            Text("Diagnose View")
+            Text(AppString.diagnoseView)
         case 2:
             Constants.Colors.white
-            Text("Scanner View")
+            Text(AppString.scannerView)
         case 3:
             Constants.Colors.white
-            Text("My Garden View")
+            Text(AppString.myGardenView)
         case 4:
             Constants.Colors.white
-            Text("Profile View")
+            Text(AppString.profileView)
         default:
             Constants.Colors.white
-            Text("Unknown View")
+            Text(AppString.unknownView)
         }
     }
 }

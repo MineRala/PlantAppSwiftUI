@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-import SwiftUI
-
 struct OnboardingPage {
     let firstVTitle: String
     let secondVTitle: String?
@@ -28,16 +25,16 @@ final class OnboardingViewModel: ObservableObject {
 
     let pages: [OnboardingPage] = [
         OnboardingPage(
-            firstVTitle: "Take a photo to",
-            secondVTitle: "the plant!",
-            boldTitle: "identify",
+            firstVTitle: AppString.takePhoto,
+            secondVTitle: AppString.thePlant,
+            boldTitle: AppString.identify,
             image: Constants.Images.onBoardScreen1,
             cornerImage: nil
         ),
         OnboardingPage(
-            firstVTitle: "Get plant",
+            firstVTitle: AppString.getPlant,
             secondVTitle: nil,
-            boldTitle: "care guides",
+            boldTitle: AppString.careGuides,
             image: Constants.Images.onBoardScreen2,
             cornerImage: Constants.Images.artwork
         )

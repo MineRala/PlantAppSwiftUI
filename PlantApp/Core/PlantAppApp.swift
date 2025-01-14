@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct PlantAppApp: App {
-    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
+    @AppStorage(AppString.hasSeenOnboarding) private var hasSeenOnboarding: Bool = false
 
     var body: some Scene {
         WindowGroup {

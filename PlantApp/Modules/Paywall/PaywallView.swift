@@ -23,14 +23,14 @@ struct PaywallView: View {
                 Spacer(minLength: 20)
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("Plant App")
+                        Text(AppString.plantApp2)
                             .font(.customFont(.visbyExtraBold, size: 30))
                             .foregroundStyle(Constants.Colors.white)
-                        Text("Premium")
+                        Text(AppString.premium)
                             .font(.customFont(.rubikLight, size: 27))
                             .foregroundColor(Constants.Colors.white)
                     }
-                    Text("Access All Features")
+                    Text(AppString.accessAllFeatures)
                         .font(.customFont(.rubikLight, size: 17))
                         .foregroundColor(Constants.Colors.white)
                 }
@@ -52,13 +52,13 @@ struct PaywallView: View {
                                     viewModel.selectOneMonth()
                                 }, label: {
                                     HStack {
-                                        Image(viewModel.isSelectOneYear ? "unselect" : "select")
+                                        Image(viewModel.isSelectOneYear ? Constants.Images.unselect : Constants.Images.select)
                                             .frame(width: 24, height: 24)
                                         VStack(alignment: .leading) {
-                                            Text("1 Month")
+                                            Text(AppString.oneMonth)
                                                 .font(.customFont(.rubikMedium, size: 16))
                                                 .foregroundStyle(Constants.Colors.white)
-                                            Text("$2.99/month, auto renewable")
+                                            Text(AppString.autoRenewable)
                                                 .font(.customFont(.rubikLight, size: 12))
                                                 .foregroundStyle(Constants.Colors.transparentWhite)
                                         }
@@ -89,10 +89,10 @@ struct PaywallView: View {
                                     Image(viewModel.isSelectOneYear ? Constants.Images.select : Constants.Images.unselect)
                                         .frame(width: 24, height: 24) // Görsel boyutunu ayarladım
                                     VStack(alignment: .leading) {
-                                        Text("1 Year")
+                                        Text(AppString.oneYear)
                                             .font(.customFont(.rubikMedium, size: 16))
                                             .foregroundStyle(Constants.Colors.white)
-                                        Text("First 3 days free, then $529.99/year")
+                                        Text(AppString.threeDayFree)
                                             .font(.customFont(.rubikRegular, size: 12))
                                             .foregroundStyle(Constants.Colors.transparentWhite)
                                     }
@@ -126,7 +126,7 @@ struct PaywallView: View {
                                 .offset(x: -15, y: 0)
                         }
                     }
-                    Button("Try free for 3 days") {}
+                    Button(AppString.tryFree) {}
                         .foregroundStyle(Constants.Colors.white)
                         .font(.customFont(.rubikMedium, size: 16))
                         .frame(maxWidth: .infinity)
@@ -135,14 +135,14 @@ struct PaywallView: View {
                         .cornerRadius(14)
                         .padding()
 
-                    Text("After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable")
+                    Text(AppString.afterThreeDay)
                         .font(.customFont(.rubikLight, size: 9))
                         .foregroundStyle(Constants.Colors.middleTransparentWhite)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
 
-                    Text("Terms • Privacy • Restore")
+                    Text(AppString.termsPrivacyRestore)
                         .font(.customFont(.rubikRegular, size: 11))
                         .foregroundStyle(Constants.Colors.lowTransparentWhite)
                         .frame(maxWidth: .infinity, alignment: .center)

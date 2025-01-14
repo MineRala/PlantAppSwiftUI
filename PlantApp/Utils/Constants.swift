@@ -48,6 +48,7 @@ struct Constants {
         static let faster = "faster"
         static let scanner = "scanner"
         static let badge = "badge"
+        static let search = "search"
         static let select = "select"
         static let unselect = "unselect"
         static let close = "close"
