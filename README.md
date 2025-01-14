@@ -38,7 +38,7 @@
         }
         img {
             width: 140px;
-            height: auto;
+            height: 140px;
         }
     </style>
 </head>
