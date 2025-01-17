@@ -15,14 +15,14 @@ final class PaywallViewModel: ObservableObject {
         FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
     ]
     @Published var isSelectOneYear: Bool = true
-    @AppStorage(AppString.hasSeenOnboarding) private var hasSeenOnboarding: Bool = false
+    @AppStorage(AppString.showOnboarding) private var showOnboarding: Bool = true
 
     var isSmallScreen: Bool {
         UIScreen.main.bounds.height < 800
     }
 
     func closeButtonTapped() {
-        hasSeenOnboarding = true
+        showOnboarding = false
     }
 
     func selectOneYear() {

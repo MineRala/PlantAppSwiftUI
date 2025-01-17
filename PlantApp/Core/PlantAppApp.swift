@@ -9,15 +9,21 @@ import SwiftUI
 
 @main
 struct PlantAppApp: App {
-    @AppStorage(AppString.hasSeenOnboarding) private var hasSeenOnboarding: Bool = false
+    @AppStorage(AppString.showOnboarding) private var showOnboarding: Bool = true
 
     var body: some Scene {
         WindowGroup {
-            if hasSeenOnboarding {
-                RootView()
-            } else {
+            if showOnboarding {
                 GetStartedView()
+            } else {
+                RootView()
             }
+
+/// Ana View'ın üstüne onboarding açtırmak istiyorsak.
+//            RootView()
+//                .fullScreenCover(isPresented: $hasSeenOnboarding) {
+//                    GetStartedView()
+//                }
         }
     }
 }

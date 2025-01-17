@@ -9,7 +9,7 @@ import Foundation
 
 enum AppString {
     // App Storege
-    static let hasSeenOnboarding = "hasSeenOnboarding"
+    static let showOnboarding = "showOnboarding"
 
     // UI
     static let welcomeTo = "Welcome to "
