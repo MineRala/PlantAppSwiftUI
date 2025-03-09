@@ -25,7 +25,7 @@ struct FeatureCardView: View {
                         .frame(width: 18, height: 18)
                         .foregroundColor(.white)
                 }
-                .padding(.bottom, 16)
+                .padding(.bottom, Constants.Padding.padding16)
 
                 Text(feature.title)
                     .font(.customFont(.rubikMedium, size: 20))

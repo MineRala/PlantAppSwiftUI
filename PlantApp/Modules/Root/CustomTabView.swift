@@ -12,17 +12,14 @@ struct CustomTabView: View {
 
     var body: some View {
         VStack {
-            // Divider line
             Rectangle()
                 .frame(height: 0.5)
                 .foregroundColor(Constants.Colors.divider)
                 .frame(maxWidth: .infinity)
 
             HStack {
-                // Dynamically generate tab bar items
                 ForEach(TabBarItem.allCases, id: \.self) { item in
                     if item == .scan {
-                        // Special button for the "scan" tab
                         Button {
                             self.index = 2
                         } label: {
@@ -31,7 +28,6 @@ struct CustomTabView: View {
                         }
                         .frame(maxWidth: .infinity)
                     } else {
-                        // General tab bar items
                         TabBarItemView(
                             imageName: item.imageName,
                             title: item.title,
@@ -43,7 +39,7 @@ struct CustomTabView: View {
                     }
                 }
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, Constants.Padding.padding10)
             .background(Constants.Colors.highTransparentWhite)
         }
     }

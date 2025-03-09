@@ -30,15 +30,15 @@ struct GetStartedView: View {
 
             VStack(alignment: .leading) {
                 GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: AppString.identifyMore)
-                    .padding(.leading, 24)
-                    .padding(.trailing, 32)
+                    .padding(.leading, Constants.Padding.padding24)
+                    .padding(.trailing, Constants.Padding.padding32)
 
                 HStack() {
                     Spacer()
                     Image(Constants.Images.getStarted)
                         .resizable()
                         .scaledToFit()
-                        .padding(.top, 24)
+                        .padding(.top, Constants.Padding.padding24)
                     Spacer()
                 }
 
@@ -52,7 +52,7 @@ struct GetStartedView: View {
                     .frame(height: 56)
                     .background(Constants.Colors.freshGreen)
                     .cornerRadius(12)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, Constants.Padding.padding24)
 
                     VStack(alignment: .center) {
                         Text(AppString.byTapping)
@@ -62,13 +62,13 @@ struct GetStartedView: View {
                             Text(AppString.privacy).underline(true, color: Constants.Colors.mutedOlive)
                         }
                     }
-                    .padding(.top, 17)
+                    .padding(.top, Constants.Padding.padding17)
                     .font(.customFont(.rubikRegular, size: 11))
                     .foregroundStyle(Constants.Colors.mutedOliveSecondary)
                     .frame(maxWidth: .infinity)
                 }
-                .padding(.top, -40)
-                .padding(.bottom, 8)
+                .padding(.top, -Constants.Padding.padding40)
+                .padding(.bottom, Constants.Padding.padding8)
             }
             .fullScreenCover(isPresented: $viewModel.showFullScreenView) {
                 OnboardingView()

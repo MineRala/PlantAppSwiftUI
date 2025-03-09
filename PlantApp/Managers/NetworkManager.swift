@@ -24,7 +24,6 @@ final class NetworkManager {
 
             switch httpResponse.statusCode {
             case 200...299:
-                // Başarılı durumlar için
                 do {
                     return try JSONDecoder().decode(T.self, from: data)
                 } catch {
@@ -39,16 +38,13 @@ final class NetworkManager {
                 throw AppError.paymentRequired
             case 404:
                 throw AppError.pageNotFound
-                // Diğer HTTP durum kodlarına göre özel hata durumları
             default:
                 throw AppError.invalidHTTPStatusCode(statusCode: httpResponse.statusCode)
             }
         } catch let error as NSError {
             if error.domain == NSURLErrorDomain && error.code == NSURLErrorNotConnectedToInternet {
-                // Internet bağlantısı yok
                 throw AppError.noInternetConnection
             } else {
-                // Diğer hatalar
                 throw error
             }
         }

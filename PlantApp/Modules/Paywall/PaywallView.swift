@@ -34,8 +34,8 @@ struct PaywallView: View {
                         .font(.customFont(.rubikLight, size: 17))
                         .foregroundColor(Constants.Colors.white)
                 }
-                .padding(.top, 20)
-                .padding(.horizontal, 20)
+                .padding(.top, Constants.Padding.padding20)
+                .padding(.horizontal, Constants.Padding.padding20)
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
@@ -79,7 +79,7 @@ struct PaywallView: View {
                                         .stroke(viewModel.isSelectOneYear ? Constants.Colors.middleLowOpacityWhite :
                                                     Constants.Colors.freshGreen, lineWidth: viewModel.isSelectOneYear ? 0.5 : 1.5)
                                 )
-                                .padding(.horizontal, 15)
+                                .padding(.horizontal, Constants.Padding.padding15)
 
                         ZStack(alignment: .topTrailing) {
                             Button(action: {
@@ -87,7 +87,7 @@ struct PaywallView: View {
                             }, label: {
                                 HStack {
                                     Image(viewModel.isSelectOneYear ? Constants.Images.select : Constants.Images.unselect)
-                                        .frame(width: 24, height: 24) // Görsel boyutunu ayarladım
+                                        .frame(width: 24, height: 24)
                                     VStack(alignment: .leading) {
                                         Text(AppString.oneYear)
                                             .font(.customFont(.rubikMedium, size: 16))
@@ -118,7 +118,7 @@ struct PaywallView: View {
                                 RoundedRectangle(cornerRadius: 14)
                                     .stroke(viewModel.isSelectOneYear ? Constants.Colors.freshGreen : Constants.Colors.middleLowOpacityWhite, lineWidth: viewModel.isSelectOneYear ? 1.5 : 0.5)
                             )
-                            .padding(.horizontal, 15)
+                            .padding(.horizontal, Constants.Padding.padding15)
 
                             Image(Constants.Images.badge)
                                 .resizable()
@@ -140,13 +140,13 @@ struct PaywallView: View {
                         .foregroundStyle(Constants.Colors.middleTransparentWhite)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, Constants.Padding.padding24)
 
                     Text(AppString.termsPrivacyRestore)
                         .font(.customFont(.rubikRegular, size: 11))
                         .foregroundStyle(Constants.Colors.lowTransparentWhite)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.top, 10)
+                        .padding(.top, Constants.Padding.padding10)
 
                 }
             }

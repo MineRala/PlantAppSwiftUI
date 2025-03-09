@@ -22,13 +22,13 @@ struct HomeView: View {
 
                     PremiumAvailableView()
                         .frame(height: 64)
-                        .padding(.all, 24)
+                        .padding(.all, Constants.Padding.padding24)
 
                     Text(AppString.getStarted)
                         .font(.customFont(.rubikMedium, size: 15))
                         .foregroundStyle(Constants.Colors.deepGreen)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, Constants.Padding.padding24)
 
                     if let questions = viewModel.questionResult {
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -37,7 +37,7 @@ struct HomeView: View {
                                     QuestionCardView(model: question)
                                 }
                             }
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, Constants.Padding.padding24)
                         }
                     }
 
@@ -48,7 +48,7 @@ struct HomeView: View {
                                     CategoryCardView(model: category)
                                 }
                             }
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, Constants.Padding.padding24)
                         }
                         .padding(.top)
                         .padding(.bottom)

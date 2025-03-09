@@ -18,12 +18,6 @@ struct PlantAppApp: App {
             } else {
                 RootView()
             }
-
-/// Ana View'ın üstüne onboarding açtırmak istiyorsak.
-//            RootView()
-//                .fullScreenCover(isPresented: $hasSeenOnboarding) {
-//                    GetStartedView()
-//                }
         }
     }
 }

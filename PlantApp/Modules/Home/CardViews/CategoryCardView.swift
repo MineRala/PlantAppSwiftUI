@@ -46,8 +46,8 @@ struct CategoryCardView: View {
                             .foregroundStyle(Constants.Colors.deepGreen)
                             .frame(maxHeight: .infinity, alignment: .topLeading)
                     }
-                    .padding(.leading, 16)
-                    .padding(.top, 16)
+                    .padding(.leading, Constants.Padding.padding16)
+                    .padding(.top, Constants.Padding.padding16)
                     Spacer()
                 }
             }

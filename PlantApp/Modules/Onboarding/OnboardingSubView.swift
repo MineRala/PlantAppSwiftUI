@@ -26,7 +26,7 @@ struct OnboardingSubView: View {
                     .aspectRatio(contentMode: .fit)
                     .clipped()
                     .rotationEffect(.degrees(-76))
-                    .padding(.top, 50)
+                    .padding(.top, Constants.Padding.padding50)
                     .blur(radius: 15)
             }
 
@@ -43,7 +43,7 @@ struct OnboardingSubView: View {
                                 .foregroundStyle(Constants.Colors.deepGreen)
                         }
                     }
-                    .padding(.leading, 18)
+                    .padding(.leading, Constants.Padding.padding18)
 
                     VStack(spacing: 0) {
                         Text(page.boldTitle)
@@ -56,7 +56,7 @@ struct OnboardingSubView: View {
                     }
                     Spacer()
                 }
-                .padding(.top, 12)
+                .padding(.top, Constants.Padding.padding12)
 
                 Spacer()
 
@@ -68,7 +68,7 @@ struct OnboardingSubView: View {
                             .aspectRatio(contentMode: .fit)
                             .clipped()
                             .scaleEffect(!viewModel.isFirstPage ? 1 : 1.2)
-                            .padding(.top, !viewModel.isFirstPage ? 50 : 0)
+                            .padding(.top, !viewModel.isFirstPage ? Constants.Padding.padding50 : Constants.Padding.padding0)
                             .animation(.easeInOut(duration: 0), value: viewModel.isFirstPage)
                         Spacer()
                     }
@@ -81,7 +81,7 @@ struct OnboardingSubView: View {
                             .offset(x: 0, y: -40)
                     }
                 }
-                .padding(.top, !viewModel.isFirstPage ? 12 : 40)
+                .padding(.top, !viewModel.isFirstPage ? Constants.Padding.padding12 : Constants.Padding.padding40)
 
                 Button(AppString.continueText) {
                     continueButtonTapped()
@@ -92,9 +92,9 @@ struct OnboardingSubView: View {
                 .frame(height: 56)
                 .background(Constants.Colors.freshGreen)
                 .cornerRadius(12)
-                .padding(.horizontal, 24)
-                .padding(.bottom, 64)
-                .padding(.top, !viewModel.isFirstPage ? -50 : 0)
+                .padding(.horizontal, Constants.Padding.padding24)
+                .padding(.bottom, Constants.Padding.padding64)
+                .padding(.top, !viewModel.isFirstPage ? -Constants.Padding.padding50 : Constants.Padding.padding0)
 //                .overlay(
 //                    Image("overlay")
 //                        .resizable()

@@ -39,7 +39,7 @@ struct HomeHeaderView: View {
                         .stroke(Constants.Colors.slateGray, lineWidth: 0.2)
                 )
             }
-            .padding(.all, 24)
+            .padding(.all, Constants.Padding.padding24)
             }
         }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Constants {
+
+    // MARK: - Color
+
     struct Colors {
         static let deepGreen = Color(hex: "#13231B")
         static let deepGreenSecondary = deepGreen.opacity(0.7)
@@ -35,6 +38,8 @@ struct Constants {
         static let iceGray = Color(hex: "#F4F6F6")
     }
 
+    // MARK: - Image
+    
     struct Images {
         static let background = "background"
         static let getStarted = "getStarted"
@@ -63,5 +68,24 @@ struct Constants {
         static let myGarden = "myGarden"
         static let profile = "profile"
         static let rotate = "rotate"
+    }
+
+    // MARK: - Padding
+
+    struct Padding {
+        static let padding0: CGFloat = 0
+        static let padding8: CGFloat = 8
+        static let padding10: CGFloat = 10
+        static let padding12: CGFloat = 12
+        static let padding15: CGFloat = 15
+        static let padding16: CGFloat = 16
+        static let padding17: CGFloat = 17
+        static let padding18: CGFloat = 18
+        static let padding24: CGFloat = 24
+        static let padding20: CGFloat = 20
+        static let padding32: CGFloat = 32
+        static let padding40: CGFloat = 40
+        static let padding50: CGFloat = 50
+        static let padding64: CGFloat = 64
     }
 }
