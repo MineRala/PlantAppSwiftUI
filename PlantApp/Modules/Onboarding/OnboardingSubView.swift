@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingSubView: View {
     let page: OnboardingPage
-    var continueButtonTapped: () -> Void
+    let continueButtonTapped: () -> Void
 
     @Binding var selection: Int
     @ObservedObject var viewModel: OnboardingViewModel

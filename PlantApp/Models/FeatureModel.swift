@@ -8,8 +8,8 @@
 import Foundation
 
 struct FeatureModel: Identifiable {
-    var id = UUID()
-    var title: String
-    var subtitle: String
-    var image: String
+    let id = UUID()
+    let title: String
+    let subtitle: String
+    let image: String
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct GetStartedHeaderView: View {
-    var attributedTitle: AttributedString
-    var subtitle: String
+    let attributedTitle: AttributedString
+    let subtitle: String
 
     var body: some View {
         VStack(alignment: .leading) {
