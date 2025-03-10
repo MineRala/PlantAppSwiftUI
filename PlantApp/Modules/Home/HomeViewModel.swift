@@ -12,37 +12,53 @@ final class HomeViewModel {
     var questionResult: QuestionModels?
     var categoryResult: CategoryModel?
     var isLoading: Bool = false
-    
-    func loadDataSerial() async {
-        isLoading = true
-        defer { isLoading = false }
+    var errorMessage: String?
 
-        do {
+    private let networkManager: NetworkClient
 
-            let questionModels: QuestionModels = try await NetworkManager.shared.fetchData(endpoint: .getQuestions)
-            self.questionResult = questionModels
+    init(networkManager: NetworkClient = NetworkManager.shared) {
+           self.networkManager = networkManager
+       }
 
-            let categoryModel: CategoryModel = try await NetworkManager.shared.fetchData(endpoint: .getCategories)
-            self.categoryResult = categoryModel
+      func loadDataSerial() async {
+          isLoading = true
+          errorMessage = nil
+          defer { isLoading = false }
 
-        } catch {
-            print("Error occurred: \(error)")
-        }
-    }
+          do {
+              let questionModels: QuestionModels = try await networkManager.fetch(endpoint: .getQuestions)
+              self.questionResult = questionModels
 
-    func loadDataConcurrent() async {
-        isLoading = true
-        defer { isLoading = false }
+              let categoryModel: CategoryModel = try await networkManager.fetch(endpoint: .getCategories)
+              self.categoryResult = categoryModel
 
-        do {
-            async let questionModels: QuestionModels = NetworkManager.shared.fetchData(endpoint: .getQuestions)
-            async let categoryModel: CategoryModel = NetworkManager.shared.fetchData(endpoint: .getCategories)
+          } catch let error as AppError {
+              self.errorMessage = error.errorMessage
+              print("Error occurred: \(error)")
+          } catch {
+              self.errorMessage = AppError.networkError(error).errorMessage
+              print("Error occurred: \(error)")
+          }
+      }
 
-            self.questionResult = try await questionModels
-            self.categoryResult = try await categoryModel
+      func loadDataConcurrent() async {
+          isLoading = true
+          errorMessage = nil
+          defer { isLoading = false }
 
-        } catch {
-            print("Error occurred: \(error)")
-        }
-    }
+          do {
+              async let questionModels: QuestionModels = networkManager.fetch(endpoint: .getQuestions)
+              async let categoryModel: CategoryModel = networkManager.fetch(endpoint: .getCategories)
+
+              self.questionResult = try await questionModels
+              self.categoryResult = try await categoryModel
+
+          } catch let error as AppError {
+              self.errorMessage = error.errorMessage
+              print("Error occurred: \(error)")
+          } catch {
+              self.errorMessage = AppError.networkError(error).errorMessage
+              print("Error occurred: \(error)")
+          }
+      }
 }
