@@ -27,13 +27,19 @@ struct FeatureCardView: View {
                 }
                 .padding(.bottom, Constants.Padding.padding16)
 
-                Text(feature.title)
-                    .font(.customFont(.rubikMedium, size: 20))
-                    .foregroundStyle(Constants.Colors.white)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(feature.title)
+                        .font(.customFont(.rubikMedium, size: 20))
+                        .lineSpacing(4)
+                        .kerning(0.38)
+                        .foregroundStyle(Constants.Colors.white)
 
-                Text(feature.subtitle)
-                    .font(.customFont(.rubikRegular, size: 13))
-                    .foregroundStyle(Constants.Colors.transparentWhite)
+                    Text(feature.subtitle)
+                        .font(.customFont(.rubikRegular, size: 13))
+                        .lineSpacing(5)
+                        .kerning(-0.08)
+                        .foregroundStyle(Constants.Colors.transparentWhite)
+                }
             }
             Spacer()
         }

@@ -23,7 +23,7 @@ struct PaywallView: View {
                 Spacer(minLength: 20)
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(AppString.plantApp2)
+                        Text(AppString.plantApp)
                             .font(.customFont(.visbyExtraBold, size: 30))
                             .foregroundStyle(Constants.Colors.white)
                         Text(AppString.premium)
@@ -32,6 +32,8 @@ struct PaywallView: View {
                     }
                     Text(AppString.accessAllFeatures)
                         .font(.customFont(.rubikLight, size: 17))
+                        .lineSpacing(7)
+                        .kerning(0.38)
                         .foregroundColor(Constants.Colors.white)
                 }
                 .padding(.top, Constants.Padding.padding20)
@@ -58,9 +60,16 @@ struct PaywallView: View {
                                             Text(AppString.oneMonth)
                                                 .font(.customFont(.rubikMedium, size: 16))
                                                 .foregroundStyle(Constants.Colors.white)
-                                            Text(AppString.autoRenewable)
-                                                .font(.customFont(.rubikLight, size: 12))
-                                                .foregroundStyle(Constants.Colors.transparentWhite)
+                                            HStack {
+                                                Text(AppString.priceMonth)
+                                                    .font(.customFont(.rubikLight, size: 12))
+                                                    .foregroundStyle(Constants.Colors.transparentWhite)
+                                                Text(AppString.autoRenewable)
+                                                    .font(.customFont(.rubikRegular, size: 12))
+                                                    .foregroundStyle(Constants.Colors.transparentWhite)
+
+                                            }
+
                                         }
                                         Spacer()
                                     }
@@ -129,6 +138,8 @@ struct PaywallView: View {
                     Button(AppString.tryFree) {}
                         .foregroundStyle(Constants.Colors.white)
                         .font(.customFont(.rubikMedium, size: 16))
+                        .lineSpacing(8)
+                        .kerning(-0.24)
                         .frame(maxWidth: .infinity)
                         .frame(height: 52)
                         .background(Constants.Colors.freshGreen)
@@ -137,6 +148,7 @@ struct PaywallView: View {
 
                     Text(AppString.afterThreeDay)
                         .font(.customFont(.rubikLight, size: 9))
+                        .lineSpacing(2.88)
                         .foregroundStyle(Constants.Colors.middleTransparentWhite)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)

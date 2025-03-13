@@ -12,12 +12,15 @@ struct GetStartedHeaderView: View {
     let subtitle: String
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 8) {
             Text(attributedTitle)
                 .foregroundStyle(Constants.Colors.deepGreen)
-                Text(subtitle)
-                    .font(.customFont(.rubikRegular, size: 16))
-                    .foregroundStyle(Constants.Colors.deepGreenSecondary)
+
+            Text(subtitle)
+                .font(.customFont(.rubikRegular, size: 16))
+                .foregroundStyle(Constants.Colors.deepGreenSecondary)
+                .lineSpacing(6)
+                .kerning(0.07)
         }
     }
 }

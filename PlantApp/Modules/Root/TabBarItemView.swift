@@ -21,6 +21,7 @@ struct TabBarItemView: View {
                     .tint(isSelected ? Constants.Colors.freshGreen : Constants.Colors.tabItemIcon)
                 Text(title)
                     .font(.customFont(.rubikRegular, size: 10))
+                    .kerning(-0.24)
                     .foregroundStyle(isSelected ? Constants.Colors.freshGreen : Constants.Colors.tabItemText)
                     .padding(.bottom)
             }

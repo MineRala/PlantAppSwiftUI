@@ -18,16 +18,22 @@ struct HomeHeaderView: View {
             VStack(alignment: .leading) {
                 Spacer()
                     .frame(height: 50)
-                Text(AppString.hiPlant)
-                    .font(.customFont(.rubikRegular, size: 16))
-                    .foregroundStyle(Constants.Colors.deepGreen)
-                Text(AppString.goodAfternoon)
-                    .font(.customFont(.rubikMedium, size: 24))
-                    .foregroundStyle(Constants.Colors.deepGreen)
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(AppString.hiPlant)
+                        .font(.customFont(.rubikRegular, size: 16))
+                        .kerning(0.07)
+                        .foregroundStyle(Constants.Colors.deepGreen)
+                    Text(AppString.goodAfternoon)
+                        .font(.customFont(.rubikMedium, size: 24))
+                        .lineSpacing(4)
+                        .kerning(0.35)
+                        .foregroundStyle(Constants.Colors.deepGreen)
+                }
                 HStack {
                     Image(Constants.Images.search)
                         .renderingMode(.original)
                         .font(.customFont(.rubikRegular, size: 16))
+                        .kerning(0.07)
                     TextField(AppString.search, text: $searchText)
                         .disabled(true)
                 }

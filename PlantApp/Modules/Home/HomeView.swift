@@ -26,6 +26,8 @@ struct HomeView: View {
 
                     Text(AppString.getStarted)
                         .font(.customFont(.rubikMedium, size: 15))
+                        .lineSpacing(5)
+                        .kerning(-0.24)
                         .foregroundStyle(Constants.Colors.deepGreen)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, Constants.Padding.padding24)

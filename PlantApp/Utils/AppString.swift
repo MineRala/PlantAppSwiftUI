@@ -13,8 +13,7 @@ enum AppString {
 
     // UI
     static let welcomeTo = "Welcome to "
-    static let plantApp = "PlantApp!"
-    static let plantApp2 = "Plant App"
+    static let plantApp = "PlantApp"
     static let identifyMore = "Identify more than 3000+ plants and 88% accuracy."
     static let getStarted = "Get Started"
     static let byTapping = "By tapping next, you are agreeing to PlantID"
@@ -37,7 +36,8 @@ enum AppString {
     static let premium = "Premium"
     static let accessAllFeatures = "Access All Features"
     static let oneMonth = "1 Month"
-    static let autoRenewable = "$2.99/month, auto renewable"
+    static let priceMonth = "$2.99/month"
+    static let autoRenewable = ", auto renewable"
     static let oneYear = "1 Year"
     static let threeDayFree = "First 3 days free, then $529.99/year"
     static let tryFree = "Try free for 3 days"

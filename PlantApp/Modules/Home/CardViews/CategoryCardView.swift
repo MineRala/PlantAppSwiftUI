@@ -43,6 +43,8 @@ struct CategoryCardView: View {
                         Spacer()
                         Text(model.name?.capitalized ?? AppString.emptyString)
                             .font(.customFont(.rubikMedium, size: 16))
+                            .lineSpacing(5)
+                            .kerning(-0.32)
                             .foregroundStyle(Constants.Colors.deepGreen)
                             .frame(maxHeight: .infinity, alignment: .topLeading)
                     }

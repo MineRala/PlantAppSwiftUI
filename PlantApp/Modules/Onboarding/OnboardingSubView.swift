@@ -31,15 +31,17 @@ struct OnboardingSubView: View {
             }
 
             VStack(spacing: 0) {
-                HStack(alignment: .top, spacing: 0) {
-                    VStack(alignment: .leading, spacing: viewModel.isFirstPage ? -5 : 5) {
+                HStack(alignment: .top, spacing: viewModel.isFirstPage ? -10: 5) {
+                    VStack(alignment: .leading, spacing: 0) {
                         Text(page.firstVTitle)
                             .font(.customFont(.rubikMedium, size: 28))
+                            .kerning(-1)
                             .foregroundStyle(Constants.Colors.deepGreen)
 
                         if let secondVTitle = page.secondVTitle {
                             Text(secondVTitle)
                                 .font(.customFont(.rubikMedium, size: 28))
+                                .kerning(-1)
                                 .foregroundStyle(Constants.Colors.deepGreen)
                         }
                     }
@@ -48,6 +50,7 @@ struct OnboardingSubView: View {
                     VStack(spacing: 0) {
                         Text(page.boldTitle)
                             .font(.customFont(.rubikExtraBold, size: 28))
+                            .kerning(-1)
                             .foregroundStyle(Constants.Colors.deepGreen)
                         Image(Constants.Images.brush)
                             .resizable()
@@ -89,6 +92,8 @@ struct OnboardingSubView: View {
                 .frame(maxWidth: .infinity)
                 .foregroundStyle(Constants.Colors.white)
                 .font(.customFont(.sfpBold, size: 15))
+                .lineSpacing(9)
+                .kerning(-0.24)
                 .frame(height: 56)
                 .background(Constants.Colors.freshGreen)
                 .cornerRadius(12)
