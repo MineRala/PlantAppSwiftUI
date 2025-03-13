@@ -10,6 +10,9 @@ import SwiftUI
 final class GetStartedViewModel: ObservableObject {
     @Published var showFullScreenView = false
 
+    let message1: String = AppString.welcomeTo
+    let message2: String = AppString.plantApp
+
     func toggleFullScreenView() {
         showFullScreenView.toggle()
     }

@@ -34,7 +34,18 @@ struct OnboardingView: View {
             .edgesIgnoringSafeArea(.all)
         }
         .onAppear {
-            viewModel.setupPageControlAppearance()
+            setupPageControlAppearance()
         }
+    }
+}
+
+
+// MARK: - Private
+extension OnboardingView {
+    private func setupPageControlAppearance() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+        UIPageControl.appearance().backgroundStyle = .minimal
+        UIPageControl.appearance().clipsToBounds = true
     }
 }

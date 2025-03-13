@@ -30,10 +30,10 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, Constants.Padding.padding24)
 
-                    if let questions = viewModel.questionResult {
+                    if !viewModel.questions.isEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 10) {
-                                ForEach(questions) { question in
+                                ForEach(viewModel.questions) { question in
                                     QuestionCardView(model: question)
                                 }
                             }
@@ -41,10 +41,10 @@ struct HomeView: View {
                         }
                     }
 
-                    if let categories = viewModel.categoryResult?.data {
+                    if !viewModel.categories.isEmpty {
                         ScrollView(.vertical, showsIndicators: false) {
                             LazyVGrid(columns: gridItems, spacing: 16) {
-                                ForEach(categories.compactMap { $0 }) { category in
+                                ForEach(viewModel.categories) { category in
                                     CategoryCardView(model: category)
                                 }
                             }

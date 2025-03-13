@@ -25,14 +25,14 @@ struct OnboardingSubView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipped()
-                    .rotationEffect(.degrees(-76))
                     .padding(.top, Constants.Padding.padding50)
                     .blur(radius: 15)
+                    .rotationEffect(.degrees(73.6))
             }
 
             VStack(spacing: 0) {
                 HStack(alignment: .top, spacing: 0) {
-                    VStack(alignment: .leading, spacing: 0) {
+                    VStack(alignment: .leading, spacing: viewModel.isFirstPage ? -5 : 5) {
                         Text(page.firstVTitle)
                             .font(.customFont(.rubikMedium, size: 28))
                             .foregroundStyle(Constants.Colors.deepGreen)

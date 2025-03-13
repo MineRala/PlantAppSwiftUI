@@ -45,11 +45,4 @@ final class OnboardingViewModel: ObservableObject {
             selection += 1
         }
     }
-
-    func setupPageControlAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
-        UIPageControl.appearance().backgroundStyle = .minimal
-        UIPageControl.appearance().clipsToBounds = true
-    }
 }
