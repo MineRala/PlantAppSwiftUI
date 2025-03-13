@@ -1,9 +1,4 @@
-//
-//  OnboardingSubView.swift
-//  PlantApp
-//
-//  Created by Mine Rala on 21.12.2024.
-//
+import SwiftUI
 
 import SwiftUI
 
@@ -30,8 +25,8 @@ struct OnboardingSubView: View {
                     .rotationEffect(.degrees(73.6))
             }
 
-            VStack(spacing: 0) {
-                HStack(alignment: .top, spacing: viewModel.isFirstPage ? -10: 5) {
+            VStack {
+                HStack(alignment: .top, spacing: viewModel.isFirstPage ? -10 : 5) {
                     VStack(alignment: .leading, spacing: 0) {
                         Text(page.firstVTitle)
                             .font(.customFont(.rubikMedium, size: 28))
@@ -69,10 +64,7 @@ struct OnboardingSubView: View {
                         Image(page.image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .clipped()
-                            .scaleEffect(!viewModel.isFirstPage ? 1 : 1.2)
-                            .padding(.top, !viewModel.isFirstPage ? Constants.Padding.padding50 : Constants.Padding.padding0)
-                            .animation(.easeInOut(duration: 0), value: viewModel.isFirstPage)
+                            .scaleEffect(viewModel.isFirstPage ? 1 : 0.8)
                         Spacer()
                     }
 
@@ -85,7 +77,22 @@ struct OnboardingSubView: View {
                     }
                 }
                 .padding(.top, !viewModel.isFirstPage ? Constants.Padding.padding12 : Constants.Padding.padding40)
+            }
 
+            if !viewModel.isFirstPage {
+                VStack {
+                    Spacer()
+                    Image("overlay")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width, height: 235)
+                        .ignoresSafeArea(.all, edges: .bottom)
+                        .zIndex(0)
+                }
+            }
+
+            VStack {
+                Spacer()
                 Button(AppString.continueText) {
                     continueButtonTapped()
                 }
@@ -99,28 +106,8 @@ struct OnboardingSubView: View {
                 .cornerRadius(12)
                 .padding(.horizontal, Constants.Padding.padding24)
                 .padding(.bottom, Constants.Padding.padding64)
-                .padding(.top, !viewModel.isFirstPage ? -Constants.Padding.padding50 : Constants.Padding.padding0)
-//                .overlay(
-//                    Image("overlay")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(height: 235)
-//                )
+                .zIndex(viewModel.isFirstPage ? 0 : 1)
             }
         }
     }
-}
-
-#Preview {
-    OnboardingSubView(
-        page: OnboardingPage(
-            firstVTitle: AppString.takePhoto,
-            secondVTitle: AppString.thePlant,
-            boldTitle: AppString.identify,
-            image: Constants.Images.onBoardScreen1,
-            cornerImage: nil
-        ),
-        continueButtonTapped: {},
-        selection: .constant(0), viewModel: OnboardingViewModel()
-    )
 }

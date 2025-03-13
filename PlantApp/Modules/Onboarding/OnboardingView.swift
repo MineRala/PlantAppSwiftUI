@@ -22,12 +22,10 @@ struct OnboardingView: View {
                         viewModel: viewModel
                     )
                     .tag(index)
-
                 }
 
                 PaywallView()
                     .tag(viewModel.pages.count)
-
             }
             .background(Color.clear)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: viewModel.selection == viewModel.pages.count ? .never : .automatic))
@@ -38,7 +36,6 @@ struct OnboardingView: View {
         }
     }
 }
-
 
 // MARK: - Private
 extension OnboardingView {

@@ -60,7 +60,7 @@ struct PaywallView: View {
                                             Text(AppString.oneMonth)
                                                 .font(.customFont(.rubikMedium, size: 16))
                                                 .foregroundStyle(Constants.Colors.white)
-                                            HStack {
+                                            HStack(spacing: 0) {
                                                 Text(AppString.priceMonth)
                                                     .font(.customFont(.rubikLight, size: 12))
                                                     .foregroundStyle(Constants.Colors.transparentWhite)
