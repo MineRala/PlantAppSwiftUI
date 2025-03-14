@@ -1,4 +1,9 @@
-import SwiftUI
+//
+//  OnboardingSubView.swift
+//  PlantApp
+//
+//  Created by Mine Rala on 22.12.2024.
+//
 
 import SwiftUI
 
@@ -15,8 +20,8 @@ struct OnboardingSubView: View {
                 .resizable()
                 .ignoresSafeArea()
 
-            if !viewModel.isFirstPage {
-                Image(Constants.Images.rotate)
+            if let rotateImage = page.style.rotateImage {
+                Image(rotateImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipped()
@@ -26,7 +31,7 @@ struct OnboardingSubView: View {
             }
 
             VStack {
-                HStack(alignment: .top, spacing: viewModel.isFirstPage ? -10 : 5) {
+                HStack(alignment: .top, spacing: page.style.titleSpacing) {
                     VStack(alignment: .leading, spacing: 0) {
                         Text(page.firstVTitle)
                             .font(.customFont(.rubikMedium, size: 28))
@@ -64,11 +69,11 @@ struct OnboardingSubView: View {
                         Image(page.image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .scaleEffect(viewModel.isFirstPage ? 1 : 0.8)
+                            .scaleEffect(page.style.scaleEffect)
                         Spacer()
                     }
 
-                    if let cornerImage = page.cornerImage {
+                    if let cornerImage = page.style.cornerImage {
                         Image(cornerImage)
                             .resizable()
                             .scaledToFit()
@@ -76,13 +81,13 @@ struct OnboardingSubView: View {
                             .offset(x: 0, y: -40)
                     }
                 }
-                .padding(.top, !viewModel.isFirstPage ? Constants.Padding.padding12 : Constants.Padding.padding40)
+                .padding(.top, page.style.topPadding)
             }
 
-            if !viewModel.isFirstPage {
+            if let overlayImage = page.style.overlayImage {
                 VStack {
                     Spacer()
-                    Image("overlay")
+                    Image(overlayImage)
                         .resizable()
                         .scaledToFit()
                         .frame(width: UIScreen.main.bounds.width, height: 235)
@@ -106,7 +111,7 @@ struct OnboardingSubView: View {
                 .cornerRadius(12)
                 .padding(.horizontal, Constants.Padding.padding24)
                 .padding(.bottom, Constants.Padding.padding64)
-                .zIndex(viewModel.isFirstPage ? 0 : 1)
+                .zIndex(page.style.overlayImage == nil ? 0 : 1)
             }
         }
     }

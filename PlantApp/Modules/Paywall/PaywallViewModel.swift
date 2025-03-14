@@ -8,12 +8,13 @@
 import SwiftUI
 
 final class PaywallViewModel: ObservableObject {
-    @Published var features: [FeatureModel] = [
+    private(set) var features: [FeatureModel] = [
         FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
         FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster),
         FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
         FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
     ]
+
     @Published var isSelectOneYear: Bool = true
     @AppStorage(AppString.showOnboarding) private var showOnboarding: Bool = true
 

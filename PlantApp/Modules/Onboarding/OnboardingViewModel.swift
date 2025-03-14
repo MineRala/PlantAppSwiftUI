@@ -7,35 +7,54 @@
 
 import SwiftUI
 
+struct OnboardingPageStyle {
+    let cornerImage: String?
+    let overlayImage: String?
+    let scaleEffect: CGFloat
+    let titleSpacing: CGFloat
+    let topPadding: CGFloat
+    let rotateImage: String?
+}
+
 struct OnboardingPage {
     let firstVTitle: String
     let secondVTitle: String?
     let boldTitle: String
     let image: String
-    let cornerImage: String?
+    let style: OnboardingPageStyle
 }
 
 final class OnboardingViewModel: ObservableObject {
     @Published var selection: Int = 0
 
-    var isFirstPage: Bool {
-        selection == 0
-    }
-
-    let pages: [OnboardingPage] = [
+    private(set) var pages: [OnboardingPage] = [
         OnboardingPage(
             firstVTitle: AppString.takePhoto,
             secondVTitle: AppString.thePlant,
             boldTitle: AppString.identify,
             image: Constants.Images.onBoardScreen1,
-            cornerImage: nil
+            style: OnboardingPageStyle(
+                cornerImage: nil,
+                overlayImage: nil,
+                scaleEffect: 1,
+                titleSpacing: -10,
+                topPadding: Constants.Padding.padding40,
+                rotateImage: nil
+            )
         ),
         OnboardingPage(
             firstVTitle: AppString.getPlant,
             secondVTitle: nil,
             boldTitle: AppString.careGuides,
             image: Constants.Images.onBoardScreen2,
-            cornerImage: Constants.Images.artwork
+            style: OnboardingPageStyle(
+                cornerImage: Constants.Images.artwork,
+                overlayImage: Constants.Images.overlay,
+                scaleEffect: 0.8,
+                titleSpacing: 5,
+                topPadding: Constants.Padding.padding12,
+                rotateImage: Constants.Images.rotate
+            )
         )
     ]
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var viewModel = HomeViewModel()
-    let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
+    private let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {

@@ -68,6 +68,7 @@ struct Constants {
         static let myGarden = "myGarden"
         static let profile = "profile"
         static let rotate = "rotate"
+        static let overlay = "overlay"
     }
 
     // MARK: - Padding
