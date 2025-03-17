@@ -92,3 +92,8 @@ private extension GetStartedView {
         .frame(maxWidth: .infinity)
     }
 }
+
+
+#Preview {
+    GetStartedView().environmentObject(GetStartedViewModel())
+}

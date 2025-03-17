@@ -20,98 +20,19 @@ struct OnboardingSubView: View {
                 .resizable()
                 .ignoresSafeArea()
 
-            if let rotateImage = page.style.rotateImage {
-                Image(rotateImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipped()
-                    .padding(.top, Constants.Padding.padding50)
-                    .blur(radius: 15)
-                    .rotationEffect(.degrees(73.6))
-            }
+            RotatedImageView(imageName: page.style.rotateImage)
 
-            VStack {
-                HStack(alignment: .top, spacing: page.style.titleSpacing) {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(page.firstVTitle)
-                            .font(.customFont(.rubikMedium, size: 28))
-                            .kerning(-1)
-                            .foregroundStyle(Constants.Colors.deepGreen)
-
-                        if let secondVTitle = page.secondVTitle {
-                            Text(secondVTitle)
-                                .font(.customFont(.rubikMedium, size: 28))
-                                .kerning(-1)
-                                .foregroundStyle(Constants.Colors.deepGreen)
-                        }
-                    }
-                    .padding(.leading, Constants.Padding.padding18)
-
-                    VStack(spacing: 0) {
-                        Text(page.boldTitle)
-                            .font(.customFont(.rubikExtraBold, size: 28))
-                            .kerning(-1)
-                            .foregroundStyle(Constants.Colors.deepGreen)
-                        Image(Constants.Images.brush)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 13)
-                    }
-                    Spacer()
-                }
-                .padding(.top, Constants.Padding.padding12)
-
+            VStack(spacing: 0) {
+                TitleView(page: page)
                 Spacer()
-
-                ZStack(alignment: .topTrailing) {
-                    HStack {
-                        Spacer()
-                        Image(page.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .scaleEffect(page.style.scaleEffect)
-                        Spacer()
-                    }
-
-                    if let cornerImage = page.style.cornerImage {
-                        Image(cornerImage)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 300, height: 300)
-                            .offset(x: 0, y: -40)
-                    }
-                }
-                .padding(.top, page.style.topPadding)
+                MainImageView(page: page)
             }
 
-            if let overlayImage = page.style.overlayImage {
-                VStack {
-                    Spacer()
-                    Image(overlayImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width, height: 235)
-                        .ignoresSafeArea(.all, edges: .bottom)
-                        .zIndex(0)
-                }
-            }
+            OverlayImageView(imageName: page.style.overlayImage)
 
-            VStack {
+            VStack(spacing: 0) {
                 Spacer()
-                Button(AppString.continueText) {
-                    continueButtonTapped()
-                }
-                .frame(maxWidth: .infinity)
-                .foregroundStyle(Constants.Colors.white)
-                .font(.customFont(.sfpBold, size: 15))
-                .lineSpacing(9)
-                .kerning(-0.24)
-                .frame(height: 56)
-                .background(Constants.Colors.freshGreen)
-                .cornerRadius(12)
-                .padding(.horizontal, Constants.Padding.padding24)
-                .padding(.bottom, Constants.Padding.padding64)
-                .zIndex(page.style.overlayImage == nil ? 0 : 1)
+                ContinueButtonView(action: continueButtonTapped, hasOverlay: page.style.overlayImage != nil)
             }
         }
     }

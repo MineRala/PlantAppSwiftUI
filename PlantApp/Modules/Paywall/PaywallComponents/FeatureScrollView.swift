@@ -1,12 +1,35 @@
 //
-//  FeatureCardView.swift
+//  FutureScrollView.swift
 //  PlantApp
 //
-//  Created by Mine Rala on 22.12.2024.
+//  Created by Mine Rala on 16.03.2025.
 //
 
 import SwiftUI
 
+struct FeatureScrollView: View {
+    let features: [FeatureModel]
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 10) {
+                ForEach(features) { feature in
+                    FeatureCardView(feature: feature)
+                }
+            }
+        }
+        .padding(.horizontal)
+    }
+}
+
+#Preview {
+    FeatureScrollView(features: [
+        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
+       ])
+}
+
+// MARK: - FeatureCardView
 struct FeatureCardView: View {
     let feature: FeatureModel
 
@@ -56,6 +79,9 @@ struct FeatureCardView: View {
     }
 }
 
-#Preview {
-    FeatureCardView(feature: FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner))
+#Preview  {
+    FeatureScrollView(features: [
+        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
+    ])
 }
