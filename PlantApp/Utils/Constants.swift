@@ -12,10 +12,17 @@ struct Constants {
     // MARK: - Color
 
     struct Colors {
+        // 🔹 Primary Colors
         static let deepGreen = Color(hex: "#13231B")
-        static let deepGreenSecondary = deepGreen.opacity(0.7)
         static let freshGreen = Color(hex: "#28AF6E")
+        static let mutedOlive = Color(hex: "#597165")
         static let white = Color(hex: "#FFFFFF")
+        static let black = Color(hex: "#000000")
+
+        // 🔹 Transparent Variations
+        static let deepGreenSecondary = deepGreen.opacity(0.7)
+        static let mutedOliveSecondary = mutedOlive.opacity(0.7)
+        static let transparentBlack = black.opacity(0.24)
         static let lowOpacityWhite = white.opacity(0.05)
         static let whiteWithOpacity10 = white.opacity(0.1)
         static let middleLowOpacityWhite = white.opacity(0.3)
@@ -23,19 +30,22 @@ struct Constants {
         static let lowTransparentWhite = white.opacity(0.5)
         static let transparentWhite = white.opacity(0.7)
         static let highTransparentWhite = white.opacity(0.92)
-        static let mutedOlive = Color(hex: "#597165")
-        static let mutedOliveSecondary = mutedOlive.opacity(0.7)
-        static let transparentBlack = Color(hex: "#000000").opacity(0.24)
+
+        // 🔹 Background & UI Colors
         static let paywallBackground = Color(hex: "#101E17")
-        static let gradient1 = Color(hex: "#28AF6E").opacity(0.168)
-        static let gradient2 = Color(hex: "28AF6E")
+        static let iceGray = Color(hex: "#F4F6F6")
         static let softBlush = Color(hex: "#FBFAFA")
         static let slateGray = Color(hex: "#3C3C43").opacity(0.25)
-        static let divider = Color(hex: "#13231B").opacity(0.1)
+        static let divider = deepGreen.opacity(0.1)
+
+        // 🔹 Tab Bar & UI Elements
         static let tabItemText = Color(hex: "#979798")
         static let tabItemIcon = Color(hex: "#BDBDBD")
+
+        // 🔹 Special Tones & Effects
         static let mindGreen = Color(hex: "#29BB89").opacity(0.18)
-        static let iceGray = Color(hex: "#F4F6F6")
+        static let gradient1 = freshGreen.opacity(0.168)
+        static let gradient2 = freshGreen
     }
 
     // MARK: - Image
@@ -74,7 +84,6 @@ struct Constants {
     // MARK: - Padding
 
     struct Padding {
-        static let padding0: CGFloat = 0
         static let padding4: CGFloat = 4
         static let padding6: CGFloat = 6
         static let padding8: CGFloat = 8
@@ -84,9 +93,8 @@ struct Constants {
         static let padding16: CGFloat = 16
         static let padding17: CGFloat = 17
         static let padding18: CGFloat = 18
-        static let padding24: CGFloat = 24
         static let padding20: CGFloat = 20
-        static let padding32: CGFloat = 32
+        static let padding24: CGFloat = 24
         static let padding40: CGFloat = 40
         static let padding50: CGFloat = 50
         static let padding64: CGFloat = 64

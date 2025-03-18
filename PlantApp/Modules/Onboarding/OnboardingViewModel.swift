@@ -36,9 +36,9 @@ final class OnboardingViewModel: ObservableObject {
             style: OnboardingPageStyle(
                 cornerImage: nil,
                 overlayImage: nil,
-                scaleEffect: 1.1,
+                scaleEffect: 1.07,
                 titleSpacing: -10,
-                topPadding: Constants.Padding.padding40,
+                topPadding: Constants.Padding.padding12,
                 rotateImage: nil
             )
         ),
@@ -50,9 +50,9 @@ final class OnboardingViewModel: ObservableObject {
             style: OnboardingPageStyle(
                 cornerImage: Constants.Images.artwork,
                 overlayImage: Constants.Images.overlay,
-                scaleEffect: 0.85,
+                scaleEffect: 0.88,
                 titleSpacing: 5,
-                topPadding: Constants.Padding.padding12,
+                topPadding: Constants.Padding.padding20,
                 rotateImage: Constants.Images.rotate
             )
         )

@@ -26,7 +26,7 @@ struct MainImageView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
-                    .offset(x: 0, y: -40)
+                    .offset(x: -10, y: -50)
             }
         }
         .padding(.top, page.style.topPadding)
