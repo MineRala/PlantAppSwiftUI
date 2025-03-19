@@ -27,10 +27,10 @@
 
 # UIs
 
-<img src="https://github.com/user-attachments/assets/013933bb-3384-4fff-b1c3-ec34ac4a27d1" alt="getStarted" width="150">
-<img src="https://github.com/user-attachments/assets/88d0c669-ec5c-439c-a2e7-9ccaa3d75c41" alt="onboarding1" width="150">
-<img src="https://github.com/user-attachments/assets/03a7ae35-3440-418c-98e0-6c83b738c1b7" alt="onboarding2" width="150">
-<img src="https://github.com/user-attachments/assets/2c71d082-5d14-4d5f-b63a-a235cf979de9" alt="paywall" width="150">
-<img src="https://github.com/user-attachments/assets/22086303-1711-46d3-987c-0f57a32a7138" alt="home" width="150">
+<img src="https://github.com/user-attachments/assets/a7f24a90-77d5-4327-9fe0-bd865e4401fa" alt="getStarted" width="150">
+<img src="https://github.com/user-attachments/assets/2db6ba79-ff5d-4417-9752-7c4f7e8ed128" alt="onboarding1" width="150">
+<img src="https://github.com/user-attachments/assets/3295a6f0-dfbb-4e69-95c3-461f3531daf1" alt="onboarding2" width="150">
+<img src="https://github.com/user-attachments/assets/63f1f807-878d-4ab3-9836-3a427d65d764" alt="paywall" width="150">
+<img src="https://github.com/user-attachments/assets/18806158-f1b1-4982-924c-86bda266e02c" alt="home" width="150">
 
 
