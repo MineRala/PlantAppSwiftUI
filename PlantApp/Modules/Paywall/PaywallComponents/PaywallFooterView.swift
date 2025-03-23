@@ -12,7 +12,7 @@ struct PaywallFooterView: View {
         VStack(spacing: 8) {
             Button(AppString.tryFree) {}
                 .foregroundStyle(Constants.Colors.white)
-                .font(.customFont(.rubikMedium, size: 16))
+                .font(CustomTextStyle.contentBody)
                 .lineSpacing(8)
                 .kerning(-0.24)
                 .frame(maxWidth: .infinity)
@@ -23,7 +23,7 @@ struct PaywallFooterView: View {
 
             VStack(spacing: 10) {
                 Text(AppString.afterThreeDay)
-                    .font(.customFont(.rubikLight, size: 9))
+                    .font(CustomTextStyle.tinyCaption)
                     .lineSpacing(2.88)
                     .foregroundStyle(Constants.Colors.middleTransparentWhite)
                     .lineLimit(2)
@@ -31,7 +31,7 @@ struct PaywallFooterView: View {
                     .padding(.horizontal, Constants.Padding.padding24)
 
                 Text(AppString.termsPrivacyRestore)
-                    .font(.customFont(.rubikRegular, size: 11))
+                    .font(CustomTextStyle.tiny)
                     .foregroundStyle(Constants.Colors.lowTransparentWhite)
                     .frame(maxWidth: .infinity, alignment: .center)
             }

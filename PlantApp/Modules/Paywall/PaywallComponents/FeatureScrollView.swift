@@ -52,13 +52,13 @@ struct FeatureCardView: View {
 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(feature.title)
-                        .font(.customFont(.rubikMedium, size: 20))
+                        .font(CustomTextStyle.headline)
                         .lineSpacing(4)
                         .kerning(0.38)
                         .foregroundStyle(Constants.Colors.white)
 
                     Text(feature.subtitle)
-                        .font(.customFont(.rubikRegular, size: 13))
+                        .font(CustomTextStyle.standart)
                         .lineSpacing(5)
                         .kerning(-0.08)
                         .foregroundStyle(Constants.Colors.transparentWhite)

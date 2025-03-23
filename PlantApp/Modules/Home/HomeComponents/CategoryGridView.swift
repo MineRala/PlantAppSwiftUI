@@ -65,7 +65,7 @@ struct CategoryCardView: View {
                     VStack {
                         Spacer()
                         Text(model.name?.capitalized ?? AppString.emptyString)
-                            .font(.customFont(.rubikMedium, size: 16))
+                            .font(CustomTextStyle.contentBody)
                             .lineSpacing(5)
                             .kerning(-0.32)
                             .foregroundStyle(Constants.Colors.deepGreen)

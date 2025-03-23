@@ -48,7 +48,7 @@ struct QuestionCardView: View {
 
             if isImageLoaded {
                 Text(model.title ?? AppString.emptyString)
-                    .font(.customFont(.rubikRegular, size: 15))
+                    .font(CustomTextStyle.bodySmall)
                     .lineSpacing(5)
                     .kerning(-0.24)
                     .foregroundStyle(Constants.Colors.white)

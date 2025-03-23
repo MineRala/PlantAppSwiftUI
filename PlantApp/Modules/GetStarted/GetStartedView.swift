@@ -50,11 +50,11 @@ struct GetStartedView: View {
 private extension GetStartedView {
     var formattedTitle: AttributedString {
         var part1 = AttributedString(viewModel.message1)
-        part1.font = .customFont(.rubikRegular, size: 28)
+        part1.font = CustomTextStyle.titleLarge
         part1.tracking = 0.07
 
         var part2 = AttributedString(viewModel.message2)
-        part2.font = .customFont(.rubikBold, size: 28)
+        part2.font = CustomTextStyle.titleLargeBold
         part2.tracking = 0.07
 
         return part1 + part2
@@ -66,7 +66,7 @@ private extension GetStartedView {
         }
         .frame(maxWidth: .infinity)
         .foregroundStyle(Constants.Colors.white)
-        .font(.customFont(.sfpBold, size: 15))
+        .font(CustomTextStyle.sfpBodyBold)
         .lineSpacing(9)
         .kerning(-0.24)
         .frame(height: 56)
@@ -85,7 +85,7 @@ private extension GetStartedView {
             }
         }
         .padding(.top, Constants.Padding.padding17)
-        .font(.customFont(.rubikRegular, size: 11))
+        .font(CustomTextStyle.tiny)
         .lineSpacing(4)
         .kerning(0.07)
         .foregroundStyle(Constants.Colors.mutedOliveSecondary)
@@ -95,5 +95,5 @@ private extension GetStartedView {
 
 
 #Preview {
-    GetStartedView().environmentObject(GetStartedViewModel())
+    GetStartedView()
 }

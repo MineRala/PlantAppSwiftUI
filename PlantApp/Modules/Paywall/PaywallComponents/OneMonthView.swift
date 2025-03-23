@@ -19,14 +19,14 @@ struct OneMonthView: View {
                     .frame(width: 24, height: 24)
                 VStack(alignment: .leading, spacing: 1) {
                     Text(AppString.oneMonth)
-                        .font(.customFont(.rubikMedium, size: 16))
+                        .font(CustomTextStyle.contentBody)
                         .foregroundStyle(Constants.Colors.white)
                     HStack(spacing: 0) {
                         Text(AppString.priceMonth)
-                            .font(.customFont(.rubikLight, size: 12))
+                            .font(CustomTextStyle.caption)
                             .foregroundStyle(Constants.Colors.transparentWhite)
                         Text(AppString.autoRenewable)
-                            .font(.customFont(.rubikRegular, size: 12))
+                            .font(CustomTextStyle.small)
                             .foregroundStyle(Constants.Colors.transparentWhite)
                     }
                 }

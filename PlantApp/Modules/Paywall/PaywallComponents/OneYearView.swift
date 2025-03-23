@@ -20,10 +20,10 @@ struct OneYearView: View {
                         .frame(width: 24, height: 24)
                     VStack(alignment: .leading, spacing: 1) {
                         Text(AppString.oneYear)
-                            .font(.customFont(.rubikMedium, size: 16))
+                            .font(CustomTextStyle.contentBody)
                             .foregroundStyle(Constants.Colors.white)
                         Text(AppString.threeDayFree)
-                            .font(.customFont(.rubikRegular, size: 12))
+                            .font(CustomTextStyle.small)
                             .foregroundStyle(Constants.Colors.transparentWhite)
                     }
                     Spacer()

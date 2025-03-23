@@ -17,7 +17,7 @@ struct GetStartedHeaderView: View {
                 .foregroundStyle(Constants.Colors.deepGreen)
 
             Text(subtitle)
-                .font(.customFont(.rubikRegular, size: 16))
+                .font(CustomTextStyle.body)
                 .foregroundStyle(Constants.Colors.deepGreenSecondary)
                 .lineSpacing(6)
                 .kerning(0.07)
@@ -28,7 +28,7 @@ struct GetStartedHeaderView: View {
 #Preview {
     var message1: AttributedString {
         var result = AttributedString(AppString.welcomeTo)
-            result.font = .customFont(.rubikRegular, size: 28)
+        result.font = CustomTextStyle.titleLarge
             result.foregroundColor = Constants.Colors.deepGreen
 
             return result
@@ -36,7 +36,7 @@ struct GetStartedHeaderView: View {
 
         var message2: AttributedString {
             var result = AttributedString(AppString.plantApp)
-            result.font = .customFont(.rubikBold, size: 28)
+            result.font = CustomTextStyle.titleLargeBold
             result.foregroundColor = Constants.Colors.deepGreen
             return result
         }

@@ -17,7 +17,7 @@ struct ContinueButtonView: View {
         }
         .frame(maxWidth: .infinity)
         .foregroundStyle(Constants.Colors.white)
-        .font(.customFont(.sfpBold, size: 15))
+        .font(CustomTextStyle.sfpBodyBold)
         .lineSpacing(9)
         .kerning(-0.24)
         .frame(height: 56)

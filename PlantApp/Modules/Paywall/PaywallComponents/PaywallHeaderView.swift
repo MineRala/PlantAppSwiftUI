@@ -14,14 +14,14 @@ struct PaywallHeaderView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(AppString.plantApp)
-                        .font(.customFont(.visbyExtraBold, size: 30))
+                        .font(CustomTextStyle.hugeTitle)
                         .foregroundStyle(Constants.Colors.white)
                     Text(AppString.premium)
-                        .font(.customFont(.rubikLight, size: 27))
+                        .font(CustomTextStyle.largeCaption)
                         .foregroundColor(Constants.Colors.white)
                 }
                 Text(AppString.accessAllFeatures)
-                    .font(.customFont(.rubikLight, size: 17))
+                    .font(CustomTextStyle.mediumCaption)
                     .lineSpacing(7)
                     .kerning(0.38)
                     .foregroundColor(Constants.Colors.transparentWhite)

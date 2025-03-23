@@ -14,13 +14,13 @@ struct TitleView: View {
         HStack(alignment: .top, spacing: page.style.titleSpacing) {
             VStack(alignment: .leading, spacing: 0) {
                 Text(page.firstVTitle)
-                    .font(.customFont(.rubikMedium, size: 28))
+                    .font(CustomTextStyle.superHeadline)
                     .kerning(-1)
                     .foregroundStyle(Constants.Colors.deepGreen)
 
                 if let secondVTitle = page.secondVTitle {
                     Text(secondVTitle)
-                        .font(.customFont(.rubikMedium, size: 28))
+                        .font(CustomTextStyle.superHeadline)
                         .kerning(-1)
                         .foregroundStyle(Constants.Colors.deepGreen)
                 }
@@ -29,7 +29,7 @@ struct TitleView: View {
 
             VStack(spacing: 0) {
                 Text(page.boldTitle)
-                    .font(.customFont(.rubikExtraBold, size: 28))
+                    .font(CustomTextStyle.extraBoldTitle)
                     .kerning(-1)
                     .foregroundStyle(Constants.Colors.deepGreen)
 

@@ -12,7 +12,7 @@ struct SectionTitleView: View {
 
     var body: some View {
         Text(title)
-            .font(.customFont(.rubikMedium, size: 15))
+            .font(CustomTextStyle.mediumBody)
             .lineSpacing(5)
             .kerning(-0.24)
             .foregroundStyle(Constants.Colors.deepGreen)
