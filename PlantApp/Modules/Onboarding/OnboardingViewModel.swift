@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-struct OnboardingPageStyle {
-    let cornerImage: String?
-    let overlayImage: String?
-    let scaleEffect: CGFloat
-    let titleSpacing: CGFloat
-    let topPadding: CGFloat
-    let rotateImage: String?
-}
-
-struct OnboardingPage {
-    let firstVTitle: String
-    let secondVTitle: String?
-    let boldTitle: String
-    let image: String
-    let style: OnboardingPageStyle
-}
-
 final class OnboardingViewModel: ObservableObject {
     @Published var selection: Int = 0
 

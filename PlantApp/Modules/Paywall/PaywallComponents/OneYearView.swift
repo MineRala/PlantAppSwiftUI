@@ -16,7 +16,7 @@ struct OneYearView: View {
                 viewModel.selectOneYear()
             }, label: {
                 HStack {
-                    Image(viewModel.isSelectOneYear ? Constants.Images.select : Constants.Images.unselect)
+                    Image(viewModel.isYearlySubscriptionSelected ? Constants.Images.select : Constants.Images.unselect)
                         .frame(width: 24, height: 24)
                     VStack(alignment: .leading, spacing: 1) {
                         Text(AppString.oneYear)
@@ -46,7 +46,7 @@ struct OneYearView: View {
             .cornerRadius(14)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
-                    .stroke(viewModel.isSelectOneYear ? Constants.Colors.freshGreen : Constants.Colors.middleLowOpacityWhite, lineWidth: viewModel.isSelectOneYear ? 1.5 : 0.5)
+                    .stroke(viewModel.isYearlySubscriptionSelected ? Constants.Colors.freshGreen : Constants.Colors.middleLowOpacityWhite, lineWidth: viewModel.isYearlySubscriptionSelected ? 1.5 : 0.5)
             )
             .padding(.horizontal, Constants.Padding.padding15)
 

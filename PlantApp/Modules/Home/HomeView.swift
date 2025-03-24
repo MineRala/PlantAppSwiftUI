@@ -35,8 +35,8 @@ struct HomeView: View {
                 }
             }
             .onAppear {
-                Task {
-                    await viewModel.loadDataConcurrent()
+                DispatchQueue.main.async {
+                    viewModel.viewDidAppear()
                 }
             }
         }

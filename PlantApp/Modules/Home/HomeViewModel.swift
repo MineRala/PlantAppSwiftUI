@@ -28,7 +28,16 @@ final class HomeViewModel {
         categoryResult?.data.compactMap { $0 } ?? []
     }
 
-    func loadDataSerial() async {
+    func viewDidAppear() {
+        Task {
+            await loadDataConcurrent()
+        }
+    }
+}
+
+// MARK: - Private
+extension HomeViewModel {
+    private func loadDataSerial() async {
         isLoading = true
         errorMessage = nil
         defer { isLoading = false }
@@ -49,7 +58,7 @@ final class HomeViewModel {
         }
     }
 
-    func loadDataConcurrent() async {
+    private func loadDataConcurrent() async {
         isLoading = true
         errorMessage = nil
         defer { isLoading = false }
@@ -71,5 +80,4 @@ final class HomeViewModel {
             print("Error occurred: \(error)")
         }
     }
-
 }

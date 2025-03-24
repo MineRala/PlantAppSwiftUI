@@ -15,7 +15,7 @@ final class PaywallViewModel: ObservableObject {
         FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
     ]
 
-    @Published var isSelectOneYear: Bool = true
+    @Published var isYearlySubscriptionSelected: Bool = true
     @AppStorage(AppString.showOnboarding) private var showOnboarding: Bool = true
 
     var isSmallScreen: Bool {
@@ -27,10 +27,10 @@ final class PaywallViewModel: ObservableObject {
     }
 
     func selectOneYear() {
-        isSelectOneYear = true
+        isYearlySubscriptionSelected = true
     }
 
     func selectOneMonth() {
-        isSelectOneYear = false
+        isYearlySubscriptionSelected = false
     }
 }
