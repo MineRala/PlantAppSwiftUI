@@ -23,7 +23,7 @@ struct HomeView: View {
                         .frame(height: 64)
                         .padding(.all, Constants.Padding.padding24)
 
-                    SectionTitleView(title: AppString.getStarted)
+                    SectionTitleView(title: AppString.getStarted.localized)
 
                     if !viewModel.questions.isEmpty {
                         QuestionListView(questions: viewModel.questions)

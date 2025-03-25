@@ -13,14 +13,14 @@ struct PaywallHeaderView: View {
             Spacer(minLength: 20)
             VStack(alignment: .leading) {
                 HStack {
-                    Text(AppString.plantApp)
+                    Text(AppString.plantApp.localized)
                         .font(CustomTextStyle.hugeTitle)
                         .foregroundStyle(Constants.Colors.white)
-                    Text(AppString.premium)
+                    Text(AppString.premium.localized)
                         .font(CustomTextStyle.largeCaption)
                         .foregroundColor(Constants.Colors.white)
                 }
-                Text(AppString.accessAllFeatures)
+                Text(AppString.accessAllFeatures.localized)
                     .font(CustomTextStyle.mediumCaption)
                     .lineSpacing(7)
                     .kerning(0.38)

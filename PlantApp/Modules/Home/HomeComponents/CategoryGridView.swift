@@ -64,7 +64,7 @@ struct CategoryCardView: View {
                 HStack {
                     VStack {
                         Spacer()
-                        Text(model.name?.capitalized ?? AppString.emptyString)
+                        Text(model.name?.capitalized ?? AppString.emptyString.localized)
                             .font(CustomTextStyle.contentBody)
                             .lineSpacing(5)
                             .kerning(-0.32)

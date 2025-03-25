@@ -26,11 +26,11 @@ enum TabBarItem: Int, CaseIterable {
 
     var title: String {
         switch self {
-        case .home: return AppString.home
-        case .diagnose: return AppString.diagnose
-        case .scan: return AppString.emptyString
-        case .myGarden: return AppString.myGarden
-        case .profile: return AppString.profile
+        case .home: return AppString.home.localized
+        case .diagnose: return AppString.diagnose.localized
+        case .scan: return AppString.emptyString.localized
+        case .myGarden: return AppString.myGarden.localized
+        case .profile: return AppString.profile.localized
         }
     }
 }

@@ -47,7 +47,7 @@ struct QuestionCardView: View {
             )
 
             if isImageLoaded {
-                Text(model.title ?? AppString.emptyString)
+                Text(model.title ?? AppString.emptyString.localized)
                     .font(CustomTextStyle.bodySmall)
                     .lineSpacing(5)
                     .kerning(-0.24)

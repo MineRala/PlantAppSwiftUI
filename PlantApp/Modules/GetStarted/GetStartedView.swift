@@ -19,7 +19,7 @@ struct GetStartedView: View {
             VStack(alignment: .leading) {
                 GetStartedHeaderView(
                     attributedTitle: formattedTitle,
-                    subtitle: AppString.identifyMore
+                    subtitle: AppString.identifyMore.localized
                 )
                 .padding(.horizontal, Constants.Padding.padding24)
 
@@ -33,7 +33,7 @@ struct GetStartedView: View {
                 }
 
                 VStack {
-                    StartButton(title: AppString.getStarted) {
+                    StartButton(title: AppString.getStarted.localized) {
                         viewModel.toggleOnboardingView()
                     }
                     TermsAndPrivacyText()

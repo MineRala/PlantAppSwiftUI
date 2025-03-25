@@ -19,11 +19,11 @@ struct HomeHeaderView: View {
                 Spacer()
                     .frame(height: 50)
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(AppString.hiPlant)
+                    Text(AppString.hiPlant.localized)
                         .font(CustomTextStyle.body)
                         .kerning(0.07)
                         .foregroundStyle(Constants.Colors.deepGreen)
-                    Text(AppString.goodAfternoon)
+                    Text(AppString.goodAfternoon.localized)
                         .font(CustomTextStyle.largeHeadline)
                         .lineSpacing(4)
                         .kerning(0.35)
@@ -34,7 +34,7 @@ struct HomeHeaderView: View {
                         .renderingMode(.original)
                         .font(CustomTextStyle.body)
                         .kerning(0.07)
-                    TextField(AppString.search, text: $searchText)
+                    TextField(AppString.search.localized, text: $searchText)
                         .disabled(true)
                 }
                 .padding()

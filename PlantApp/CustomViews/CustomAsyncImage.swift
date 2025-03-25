@@ -33,7 +33,7 @@ struct CustomAsyncImage: View {
                                 self.isImageLoaded = true
                             }
                     case .failure:
-                        Text(AppString.imageNotLoad)
+                        Text(AppString.imageNotLoad.localized)
                             .foregroundStyle(.gray)
                             .font(.caption)
                     @unknown default:
@@ -41,7 +41,7 @@ struct CustomAsyncImage: View {
                     }
                 }
             } else {
-                Text(AppString.imageInvalid)
+                Text(AppString.imageInvalid.localized)
                     .foregroundStyle(.gray)
                     .font(.caption)
             }

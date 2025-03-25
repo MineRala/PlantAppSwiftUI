@@ -10,7 +10,7 @@ import SwiftUI
 struct PaywallFooterView: View {
     var body: some View {
         VStack(spacing: 8) {
-            Button(AppString.tryFree) {}
+            Button(AppString.tryFree.localized) {}
                 .foregroundStyle(Constants.Colors.white)
                 .font(CustomTextStyle.contentBody)
                 .lineSpacing(8)
@@ -22,7 +22,7 @@ struct PaywallFooterView: View {
                 .padding(.horizontal)
 
             VStack(spacing: 10) {
-                Text(AppString.afterThreeDay)
+                Text(AppString.afterThreeDay.localized)
                     .font(CustomTextStyle.tinyCaption)
                     .lineSpacing(2.88)
                     .foregroundStyle(Constants.Colors.middleTransparentWhite)
@@ -30,7 +30,7 @@ struct PaywallFooterView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, Constants.Padding.padding24)
 
-                Text(AppString.termsPrivacyRestore)
+                Text(AppString.termsPrivacyRestore.localized)
                     .font(CustomTextStyle.tiny)
                     .foregroundStyle(Constants.Colors.lowTransparentWhite)
                     .frame(maxWidth: .infinity, alignment: .center)

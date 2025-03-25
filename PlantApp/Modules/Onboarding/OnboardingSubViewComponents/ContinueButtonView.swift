@@ -12,7 +12,7 @@ struct ContinueButtonView: View {
     let hasOverlay: Bool
 
     var body: some View {
-        Button(AppString.continueText) {
+        Button(AppString.continueText.localized) {
             action()
         }
         .frame(maxWidth: .infinity)

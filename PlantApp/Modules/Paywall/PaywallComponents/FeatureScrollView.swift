@@ -24,8 +24,8 @@ struct FeatureScrollView: View {
 
 #Preview {
     FeatureScrollView(features: [
-        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
-        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
+        FeatureModel(title: AppString.unlimited.localized, subtitle: AppString.plantIdentify.localized, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster.localized, subtitle: AppString.process.localized, image: Constants.Images.faster)
        ])
 }
 
@@ -81,7 +81,7 @@ struct FeatureCardView: View {
 
 #Preview  {
     FeatureScrollView(features: [
-        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
-        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
+        FeatureModel(title: AppString.unlimited.localized, subtitle: AppString.plantIdentify.localized, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster.localized, subtitle: AppString.process.localized, image: Constants.Images.faster)
     ])
 }

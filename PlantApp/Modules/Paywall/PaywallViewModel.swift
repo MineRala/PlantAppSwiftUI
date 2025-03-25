@@ -9,10 +9,10 @@ import SwiftUI
 
 final class PaywallViewModel: ObservableObject {
     private(set) var features: [FeatureModel] = [
-        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
-        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster),
-        FeatureModel(title: AppString.unlimited, subtitle: AppString.plantIdentify, image: Constants.Images.scanner),
-        FeatureModel(title: AppString.faster, subtitle: AppString.process, image: Constants.Images.faster)
+        FeatureModel(title: AppString.unlimited.localized, subtitle: AppString.plantIdentify.localized, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster.localized, subtitle: AppString.process.localized, image: Constants.Images.faster),
+        FeatureModel(title: AppString.unlimited.localized, subtitle: AppString.plantIdentify.localized, image: Constants.Images.scanner),
+        FeatureModel(title: AppString.faster.localized, subtitle: AppString.process.localized, image: Constants.Images.faster)
     ]
 
     @Published var isYearlySubscriptionSelected: Bool = true

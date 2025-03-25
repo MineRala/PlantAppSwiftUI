@@ -10,11 +10,11 @@ import SwiftUI
 struct TermsAndPrivacyText: View {
     var body: some View {
         VStack {
-            Text(AppString.byTapping)
+            Text(AppString.byTapping.localized)
             HStack(spacing: 0) {
-                Text(AppString.terms).underline(true, color: Constants.Colors.mutedOlive)
-                Text(AppString.ampersand)
-                Text(AppString.privacy).underline(true, color: Constants.Colors.mutedOlive)
+                Text(AppString.terms.localized).underline(true, color: Constants.Colors.mutedOlive)
+                Text(AppString.ampersand.localized)
+                Text(AppString.privacy.localized).underline(true, color: Constants.Colors.mutedOlive)
             }
         }
         .padding(.top, Constants.Padding.padding17)

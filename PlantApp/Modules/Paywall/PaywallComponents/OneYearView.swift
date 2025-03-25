@@ -19,10 +19,10 @@ struct OneYearView: View {
                     Image(viewModel.isYearlySubscriptionSelected ? Constants.Images.select : Constants.Images.unselect)
                         .frame(width: 24, height: 24)
                     VStack(alignment: .leading, spacing: 1) {
-                        Text(AppString.oneYear)
+                        Text(AppString.oneYear.localized)
                             .font(CustomTextStyle.contentBody)
                             .foregroundStyle(Constants.Colors.white)
-                        Text(AppString.threeDayFree)
+                        Text(AppString.threeDayFree.localized)
                             .font(CustomTextStyle.small)
                             .foregroundStyle(Constants.Colors.transparentWhite)
                     }

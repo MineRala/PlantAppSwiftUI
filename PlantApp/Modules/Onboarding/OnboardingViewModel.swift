@@ -12,9 +12,9 @@ final class OnboardingViewModel: ObservableObject {
 
     private(set) var pages: [OnboardingPage] = [
         OnboardingPage(
-            firstVTitle: AppString.takePhoto,
-            secondVTitle: AppString.thePlant,
-            boldTitle: AppString.identify,
+            firstVTitle: AppString.takePhoto.localized,
+            secondVTitle: AppString.thePlant.localized,
+            boldTitle: AppString.identify.localized,
             image: Constants.Images.onBoardScreen1,
             style: OnboardingPageStyle(
                 cornerImage: nil,
@@ -26,9 +26,9 @@ final class OnboardingViewModel: ObservableObject {
             )
         ),
         OnboardingPage(
-            firstVTitle: AppString.getPlant,
+            firstVTitle: AppString.getPlant.localized,
             secondVTitle: nil,
-            boldTitle: AppString.careGuides,
+            boldTitle: AppString.careGuides.localized,
             image: Constants.Images.onBoardScreen2,
             style: OnboardingPageStyle(
                 cornerImage: Constants.Images.artwork,

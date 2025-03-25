@@ -27,7 +27,7 @@ struct GetStartedHeaderView: View {
 
 #Preview {
     var message1: AttributedString {
-        var result = AttributedString(AppString.welcomeTo)
+        var result = AttributedString(AppString.welcomeTo.localized)
         result.font = CustomTextStyle.titleLarge
             result.foregroundColor = Constants.Colors.deepGreen
 
@@ -35,10 +35,10 @@ struct GetStartedHeaderView: View {
         }
 
         var message2: AttributedString {
-            var result = AttributedString(AppString.plantApp)
+            var result = AttributedString(AppString.plantApp.localized)
             result.font = CustomTextStyle.titleLargeBold
             result.foregroundColor = Constants.Colors.deepGreen
             return result
         }
-    GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: AppString.identifyMore)
+    GetStartedHeaderView(attributedTitle: message1 + message2, subtitle: AppString.identifyMore.localized)
 }

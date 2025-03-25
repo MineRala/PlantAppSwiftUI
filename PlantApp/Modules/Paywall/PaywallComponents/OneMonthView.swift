@@ -18,14 +18,14 @@ struct OneMonthView: View {
                 Image(viewModel.isYearlySubscriptionSelected ? Constants.Images.unselect : Constants.Images.select)
                     .frame(width: 24, height: 24)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text(AppString.oneMonth)
+                    Text(AppString.oneMonth.localized)
                         .font(CustomTextStyle.contentBody)
                         .foregroundStyle(Constants.Colors.white)
                     HStack(spacing: 0) {
-                        Text(AppString.priceMonth)
+                        Text(AppString.priceMonth.localized)
                             .font(CustomTextStyle.caption)
                             .foregroundStyle(Constants.Colors.transparentWhite)
-                        Text(AppString.autoRenewable)
+                        Text(AppString.autoRenewable.localized)
                             .font(CustomTextStyle.small)
                             .foregroundStyle(Constants.Colors.transparentWhite)
                     }
