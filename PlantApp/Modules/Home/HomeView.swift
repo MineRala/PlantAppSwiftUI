@@ -24,13 +24,23 @@ struct HomeView: View {
                         .padding(.all, Constants.Padding.padding24)
 
                     SectionTitleView(title: AppString.getStarted.localized)
+                    switch viewModel.viewState {
+                    case .loading:
+                        ProgressView("Loading...")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                    if !viewModel.questions.isEmpty {
-                        QuestionListView(questions: viewModel.questions)
-                    }
+                    case .dataLoaded(let questions, let categories):
+                        if !questions.isEmpty {
+                            QuestionListView(questions: questions)
+                        }
+                        if !categories.isEmpty {
+                            CategoryGridView(categories: categories)
+                        }
 
-                    if !viewModel.categories.isEmpty {
-                        CategoryGridView(categories: viewModel.categories)
+                    case .error(let message):
+                        Text("Error: \(message)")
+                            .foregroundColor(.red)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                 }
             }
