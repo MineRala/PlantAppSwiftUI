@@ -19,6 +19,7 @@ enum AppError: Error {
     case paymentRequired
     case pageNotFound
     case noInternetConnection
+    case unknown
 
     var errorMessage: String {
         switch self {
@@ -44,6 +45,8 @@ enum AppError: Error {
             return AppString.pageNotFound.localized
         case .noInternetConnection:
             return AppString.noInternetConnection.localized
+        case .unknown:
+            return AppString.unowned.localized
         }
     }
 }

@@ -68,4 +68,5 @@ enum AppString {
     static let paymentRequired = "paymentRequired"
     static let pageNotFound = "pageNotFound"
     static let noInternetConnection = "noInternetConnection"
+    static let unowned = "unowned"
 }

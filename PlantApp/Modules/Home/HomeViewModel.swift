@@ -10,10 +10,10 @@ import SwiftUI
 @Observable
 final class HomeViewModel {
     var viewState: ViewState = .loading
-    private let networkManager: NetworkClient
+    private let homeService: HomeServiceProtocol
 
-    init(networkManager: NetworkClient = NetworkManager.shared) {
-        self.networkManager = networkManager
+    init(homeService: HomeServiceProtocol = HomeService()) {
+        self.homeService = homeService
     }
 
     func viewDidAppear() {
@@ -29,11 +29,10 @@ extension HomeViewModel {
         viewState = .loading
 
         do {
-            let questionModels: QuestionModels = try await networkManager.fetch(endpoint: .getQuestions)
+            let questions = try await homeService.fetchQuestions()
+            let categories = try await homeService.fetchCategories()
 
-            let categoryModel: CategoryModel = try await networkManager.fetch(endpoint: .getCategories)
-
-            viewState = .dataLoaded(questions: questionModels, categories: categoryModel.data.compactMap { $0 })
+            viewState = .dataLoaded(questions: questions, categories: categories.data.compactMap { $0 })
 
         } catch let error as AppError {
             viewState = .error(message: error.errorMessage)
@@ -48,12 +47,12 @@ extension HomeViewModel {
         viewState = .loading
 
         do {
-            async let questionModels: QuestionModels = networkManager.fetch(endpoint: .getQuestions)
-            async let categoryModel: CategoryModel = networkManager.fetch(endpoint: .getCategories)
+            async let questions = homeService.fetchQuestions()
+            async let categories = homeService.fetchCategories()
 
-            let (questions, categories) = try await (questionModels, categoryModel)
+            let (questionsResult, categoriesResult) = try await (questions, categories)
 
-            viewState = .dataLoaded(questions: questions, categories: categories.data.compactMap { $0 })
+            viewState = .dataLoaded(questions: questionsResult, categories: categoriesResult.data.compactMap { $0 })
 
         } catch let error as AppError {
             viewState = .error(message: error.errorMessage)

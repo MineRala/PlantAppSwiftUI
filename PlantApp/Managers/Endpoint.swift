@@ -10,7 +10,20 @@ import Foundation
 //https://dummy-api-jtg6bessta-ey.a.run.app/getCategories
 //https://dummy-api-jtg6bessta-ey.a.run.app/getQuestions
 
-public enum Endpoint {
+import Foundation
+
+// MARK: - API Endpoint Protocol
+protocol APIEndpoint {
+    var baseURL: String { get }
+    var path: String { get }
+    var method: HTTPMethod { get }
+    var headers: [String: String]? { get }
+    var parameters: [String: Any]? { get }
+    var encoding: EncodingType { get }
+}
+
+// MARK: - APIEndpoint Enum
+enum Endpoint: APIEndpoint {
     enum Constant {
         static let baseURL = "https://dummy-api-jtg6bessta-ey.a.run.app/"
     }
@@ -18,12 +31,32 @@ public enum Endpoint {
     case getQuestions
     case getCategories
 
-    var url: String {
+    var baseURL: String {
+        return Constant.baseURL
+    }
+
+    var path: String {
         switch self {
         case .getQuestions:
-            return "\(Constant.baseURL)getQuestions"
+            return "getQuestions"
         case .getCategories:
-            return "\(Constant.baseURL)getCategories"
+            return "getCategories"
         }
+    }
+
+    var method: HTTPMethod {
+        return .get
+    }
+
+    var headers: [String: String]? {
+        return ["Content-Type": "application/json"]
+    }
+
+    var parameters: [String: Any]? {
+        return nil
+    }
+
+    var encoding: EncodingType {
+        return .urlEncoding
     }
 }

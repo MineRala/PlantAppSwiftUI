@@ -55,4 +55,4 @@
 "paymentRequired" = "Sorry, you need to pay to view or access this content.";
 "pageNotFound" = "Sorry, the page or resource you requested could not be found. Please check the URL or try again later.";
 "noInternetConnection" = "Sorry, there is no internet connection. Please check your internet connection and try again.";
-
+"unowned" = "Unowned Error!";
