@@ -26,6 +26,9 @@
 - Custom Tabbar
 - Dependecy Injection
 
+# Todo:
+- Unit tests will be implemented for viewModels.
+
 # UIs
 
 <img src="https://github.com/user-attachments/assets/a7f24a90-77d5-4327-9fe0-bd865e4401fa" alt="getStarted" width="150">
