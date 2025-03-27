@@ -23,7 +23,8 @@
 - MVVM
 - Async/Await
 - Error Handling
-- Tabbar
+- Custom Tabbar
+- Dependecy Injection
 
 # UIs
 
