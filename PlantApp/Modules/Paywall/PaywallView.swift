@@ -19,11 +19,11 @@ struct PaywallView: View {
                 .scaledToFill()
                 .frame(height: 140, alignment: .bottom)
 
-            VStack(spacing: 0) {
-                VStack(alignment: .leading, spacing: 20) {
+            VStack(spacing: Constants.Spacing.spacing0) {
+                VStack(alignment: .leading, spacing: Constants.Spacing.spacing20) {
                     PaywallHeaderView()
                     FeatureScrollView(features: viewModel.features)
-                    VStack(spacing: 16) {
+                    VStack(spacing: Constants.Spacing.spacing16) {
                         OneMonthView(viewModel: viewModel)
                         OneYearView(viewModel: viewModel)
                     }

@@ -18,7 +18,7 @@ struct HomeHeaderView: View {
             VStack(alignment: .leading) {
                 Spacer()
                     .frame(height: 50)
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: Constants.Spacing.spacing6) {
                     Text(AppString.hiPlant.localized)
                         .font(CustomTextStyle.body)
                         .kerning(0.07)

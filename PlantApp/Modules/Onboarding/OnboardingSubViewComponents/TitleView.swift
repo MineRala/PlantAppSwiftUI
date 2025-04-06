@@ -12,7 +12,7 @@ struct TitleView: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: page.style.titleSpacing) {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: Constants.Spacing.spacing0) {
                 Text(page.firstVTitle)
                     .font(CustomTextStyle.superHeadline)
                     .kerning(-1)
@@ -27,7 +27,7 @@ struct TitleView: View {
             }
             .padding(.leading, Constants.Padding.padding18)
 
-            VStack(spacing: 0) {
+            VStack(spacing: Constants.Spacing.spacing0) {
                 Text(page.boldTitle)
                     .font(CustomTextStyle.extraBoldTitle)
                     .kerning(-1)

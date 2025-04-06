@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PaywallHeaderView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Spacer(minLength: 20)
+        VStack(alignment: .leading, spacing: Constants.Spacing.spacing0) {
+            Spacer(minLength: Constants.Spacing.spacing20)
             VStack(alignment: .leading) {
                 HStack {
                     Text(AppString.plantApp.localized)

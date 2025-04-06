@@ -15,7 +15,7 @@ struct TabBarItemView: View {
 
     var body: some View {
         Button(action: action) {
-            VStack(spacing: 2) {
+            VStack(spacing: Constants.Spacing.spacing2) {
                 Image(imageName)
                     .renderingMode(.template)
                     .tint(isSelected ? Constants.Colors.freshGreen : Constants.Colors.tabItemIcon)

@@ -11,7 +11,7 @@ struct RootView: View {
     @State var index = 0
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: Constants.Spacing.spacing0) {
             ZStack {
                 getViewForIndex(index)
             }

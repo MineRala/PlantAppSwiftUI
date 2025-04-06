@@ -11,7 +11,7 @@ struct TermsAndPrivacyText: View {
     var body: some View {
         VStack {
             Text(AppString.byTapping.localized)
-            HStack(spacing: 0) {
+            HStack(spacing: Constants.Spacing.spacing0) {
                 Text(AppString.terms.localized).underline(true, color: Constants.Colors.mutedOlive)
                 Text(AppString.ampersand.localized)
                 Text(AppString.privacy.localized).underline(true, color: Constants.Colors.mutedOlive)

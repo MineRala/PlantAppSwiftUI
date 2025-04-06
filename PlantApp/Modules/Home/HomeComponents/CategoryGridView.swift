@@ -13,7 +13,7 @@ struct CategoryGridView: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: gridItems, spacing: 16) {
+            LazyVGrid(columns: gridItems, spacing: Constants.Spacing.spacing16) {
                 ForEach(categories) { category in
                     CategoryCardView(model: category)
                 }

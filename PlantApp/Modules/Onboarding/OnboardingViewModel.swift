@@ -20,7 +20,7 @@ final class OnboardingViewModel: ObservableObject {
                 cornerImage: nil,
                 overlayImage: nil,
                 scaleEffect: 1.07,
-                titleSpacing: -10,
+                titleSpacing: -Constants.Spacing.spacing10,
                 topPadding: Constants.Padding.padding12,
                 rotateImage: nil
             )
@@ -34,7 +34,7 @@ final class OnboardingViewModel: ObservableObject {
                 cornerImage: Constants.Images.artwork,
                 overlayImage: Constants.Images.overlay,
                 scaleEffect: 0.88,
-                titleSpacing: 5,
+                titleSpacing: Constants.Spacing.spacing5,
                 topPadding: Constants.Padding.padding20,
                 rotateImage: Constants.Images.rotate
             )

@@ -18,7 +18,7 @@ struct OneYearView: View {
                 HStack {
                     Image(viewModel.isYearlySubscriptionSelected ? Constants.Images.select : Constants.Images.unselect)
                         .frame(width: 24, height: 24)
-                    VStack(alignment: .leading, spacing: 1) {
+                    VStack(alignment: .leading, spacing: Constants.Spacing.spacing1) {
                         Text(AppString.oneYear.localized)
                             .font(CustomTextStyle.contentBody)
                             .foregroundStyle(Constants.Colors.white)

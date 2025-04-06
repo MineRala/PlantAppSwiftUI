@@ -22,7 +22,7 @@ struct OnboardingSubView: View {
 
             RotatedImageView(imageName: page.style.rotateImage)
 
-            VStack(spacing: 0) {
+            VStack(spacing: Constants.Spacing.spacing0) {
                 TitleView(page: page)
                 Spacer()
                 MainImageView(page: page)
@@ -30,7 +30,7 @@ struct OnboardingSubView: View {
 
             OverlayImageView(imageName: page.style.overlayImage)
 
-            VStack(spacing: 0) {
+            VStack(spacing: Constants.Spacing.spacing0) {
                 Spacer()
                 ContinueButtonView(action: continueButtonTapped, hasOverlay: page.style.overlayImage != nil)
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PaywallFooterView: View {
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Constants.Spacing.spacing8) {
             Button(AppString.tryFree.localized) {}
                 .foregroundStyle(Constants.Colors.white)
                 .font(CustomTextStyle.contentBody)
@@ -21,7 +21,7 @@ struct PaywallFooterView: View {
                 .cornerRadius(14)
                 .padding(.horizontal)
 
-            VStack(spacing: 10) {
+            VStack(spacing: Constants.Spacing.spacing10) {
                 Text(AppString.afterThreeDay.localized)
                     .font(CustomTextStyle.tinyCaption)
                     .lineSpacing(2.88)

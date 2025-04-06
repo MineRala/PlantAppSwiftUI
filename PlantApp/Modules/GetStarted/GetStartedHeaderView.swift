@@ -12,7 +12,7 @@ struct GetStartedHeaderView: View {
     let subtitle: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: Constants.Spacing.spacing8) {
             Text(attributedTitle)
                 .foregroundStyle(Constants.Colors.deepGreen)
 

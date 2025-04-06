@@ -49,7 +49,7 @@ struct Constants {
     }
 
     // MARK: - Image
-    
+
     struct Images {
         static let background = "background"
         static let getStarted = "getStarted"
@@ -99,4 +99,20 @@ struct Constants {
         static let padding50: CGFloat = 50
         static let padding64: CGFloat = 64
     }
+
+    // MARK: - Spacing
+
+    struct Spacing {
+        static let spacing0: CGFloat = 0
+        static let spacing1: CGFloat = 1
+        static let spacing2: CGFloat = 2
+        static let spacing4: CGFloat = 4
+        static let spacing5: CGFloat = 5
+        static let spacing6: CGFloat = 6
+        static let spacing8: CGFloat = 8
+        static let spacing10: CGFloat = 10
+        static let spacing16: CGFloat = 16
+        static let spacing20: CGFloat = 20
+    }
 }
+

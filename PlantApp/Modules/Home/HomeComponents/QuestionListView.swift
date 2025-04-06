@@ -12,7 +12,7 @@ struct QuestionListView: View {
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 10) {
+            HStack(spacing: Constants.Spacing.spacing10) {
                 ForEach(questions) { question in
                     QuestionCardView(model: question)
                 }

@@ -12,7 +12,7 @@ struct FeatureScrollView: View {
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 10) {
+            HStack(spacing: Constants.Spacing.spacing10) {
                 ForEach(features) { feature in
                     FeatureCardView(feature: feature)
                 }
@@ -35,7 +35,7 @@ struct FeatureCardView: View {
 
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: Constants.Spacing.spacing0) {
                 ZStack {
                     Rectangle()
                         .fill(Constants.Colors.transparentBlack)
@@ -50,7 +50,7 @@ struct FeatureCardView: View {
                 }
                 .padding(.bottom, Constants.Padding.padding16)
 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: Constants.Spacing.spacing4) {
                     Text(feature.title)
                         .font(CustomTextStyle.headline)
                         .lineSpacing(4)
