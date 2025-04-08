@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @State var index = 0
+    @State private var homeViewModel = HomeViewModel()
 
     var body: some View {
         VStack(spacing: Constants.Spacing.spacing0) {
@@ -26,7 +27,7 @@ struct RootView: View {
         switch index {
         case 0:
             Constants.Colors.softBlush
-            HomeView()
+            HomeView(viewModel: homeViewModel)
         case 1:
             Constants.Colors.white
             Text(AppString.diagnoseView.localized)
